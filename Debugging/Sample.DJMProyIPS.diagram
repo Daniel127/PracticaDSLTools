@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dRQPJPFMAMPracticaDSLToolsDiagram dslVersion="1.0.0.0" Id="f2a9a449-10d8-4e18-af5d-acb800dea12c" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="42ca25f9-7103-427c-90b0-39ebf42cbac5" />
+  <nestedChildShapes>
+    <exampleShape Id="9f253538-ad80-4661-b43e-fbc177e664a5" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/42ca25f9-7103-427c-90b0-39ebf42cbac5/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="cf35350c-4ffd-4fa3-b982-31361bdd8d4e" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/42ca25f9-7103-427c-90b0-39ebf42cbac5/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="471b712e-2eaa-4b63-aadd-96fcf1443dc9" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="db79aad1-3c1f-43f0-bfa0-bf6950ccb952">
+      <nodes>
+        <exampleShapeMoniker Id="9f253538-ad80-4661-b43e-fbc177e664a5" />
+        <exampleShapeMoniker Id="cf35350c-4ffd-4fa3-b982-31361bdd8d4e" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</dRQPJPFMAMPracticaDSLToolsDiagram>
