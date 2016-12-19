@@ -1,2 +1,17 @@
-<!-- Placeholder for content that will be generated when the solution is built for the first time -->
-<VSTemplate xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"/>
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{8bc26f5b-9f45-4074-ba19-9e50532d0aa9}</TemplateID>
+		<Name Package="{dc0521ab-2878-4761-9627-b5b651b3e285}" ID="103"/>
+		<Description Package="{dc0521ab-2878-4761-9627-b5b651b3e285}" ID="102"/>
+		<Icon Package="{dc0521ab-2878-4761-9627-b5b651b3e285}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>DRQPJPFMAMPracticaDSLTools.DJMProyIPS</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.DJMProyIPS">DJMProyIPS.DJMProyIPS</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.DJMProyIPS.diagram">DJMProyIPS.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+
