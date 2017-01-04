@@ -31,6 +31,7 @@
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="e6f4b349-db2e-4c39-894a-0093007b83a2" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="Entidad" DisplayName="Entidad" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools">
+      <Notes>n</Notes>
       <Properties>
         <DomainProperty Id="8a7577d5-4c41-45ac-9e7c-4fada3352f1c" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad.Name" Name="Name" DisplayName="Name" DefaultValue="" IsElementName="true">
           <Type>
@@ -289,6 +290,11 @@
         <TextDecorator Name="CardinalidadDerDecorator" DisplayName="Cardinalidad Der Decorator" DefaultText="CardinalidadDerDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <ImageShape Id="7dca74e6-e383-4fd9-a058-0ea7872fed27" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1" Name="ImageShape1" DisplayName="Image Shape1" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Image Shape1" InitialHeight="1" Image="Resources\untitled (3).png">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </ImageShape>
   </Shapes>
   <Connectors>
     <Connector Id="176846b6-721f-4d71-883f-42397bbecb5f" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionAtributoConnector" Name="RelacionAtributoConnector" DisplayName="Relacion Atributo Connector" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Relacion Atributo Connector" RoutingStyle="Straight" />
@@ -412,6 +418,9 @@
       <XmlClassData TypeName="RelacionDerechaReferencesEntidadIzquierda" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionDerechaReferencesEntidadIzquierdaMoniker" ElementName="relacionDerechaReferencesEntidadIzquierda" MonikerTypeName="RelacionDerechaReferencesEntidadIzquierdaMoniker">
         <DomainRelationshipMoniker Name="RelacionDerechaReferencesEntidadIzquierda" />
       </XmlClassData>
+      <XmlClassData TypeName="ImageShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="imageShape1Moniker" ElementName="imageShape1" MonikerTypeName="ImageShape1Moniker">
+        <ImageShapeMoniker Name="ImageShape1" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DRQPJPFMAMPracticaDSLToolsExplorer" />
@@ -495,21 +504,6 @@
         <GeometryShapeMoniker Name="EntidadShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="AtributoEntidad" />
-        <ParentElementPath>
-          <DomainPath>EntidadHasAtributoEntidad.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="AtributoEntidadShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="AtributoEntidadShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="ClavePrimaria" />
         <ParentElementPath>
           <DomainPath>EntidadHasClavePrimaria.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
@@ -570,6 +564,13 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="RelacionShape" />
       </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="AtributoEntidad" />
+        <ParentElementPath>
+          <DomainPath>EntidadHasAtributoEntidad.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <ImageShapeMoniker Name="ImageShape1" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -593,32 +594,36 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="DRQPJPFMAMPracticaDSLToolsSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="DRQPJPFMAMPracticaDSLTools">
-      <ElementTool Name="Entidad" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Entidad" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
+    <ToolboxTab TabText="Entidades">
+      <ElementTool Name="Entidad" ToolboxIcon="Resources\FormaEntidad.bmp" Caption="Entidad" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
         <Notes>Entidad del MER</Notes>
         <DomainClassMoniker Name="Entidad" />
       </ElementTool>
-      <ElementTool Name="AtributoEntidad" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AtributoEntidad" Tooltip="Atributo Entidad" HelpKeyword="AtributoEntidad">
-        <DomainClassMoniker Name="AtributoEntidad" />
-      </ElementTool>
-      <ElementTool Name="ClavePrimaria" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria" HelpKeyword="ClavePrimaria">
+      <ElementTool Name="ClavePrimaria" ToolboxIcon="Resources\FormaPrimaryKey.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria" HelpKeyword="ClavePrimaria">
         <DomainClassMoniker Name="ClavePrimaria" />
       </ElementTool>
-      <ElementTool Name="Relacion" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
+      <ElementTool Name="Relacion" ToolboxIcon="Resources\FormaRelacion.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
         <DomainClassMoniker Name="Relacion" />
       </ElementTool>
-      <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
-        <DomainClassMoniker Name="AtributoRelacion" />
-      </ElementTool>
-      <ConnectionTool Name="RelacionAtributo" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionAtributo" Tooltip="Relacion Atributo" HelpKeyword="RelacionAtributo">
+    </ToolboxTab>
+    <ToolboxTab TabText="Relaciones">
+      <ConnectionTool Name="RelacionAtributo" ToolboxIcon="Resources\AtributoRelacion.bmp" Caption="RelacionAtributo" Tooltip="Relacion Atributo" HelpKeyword="RelacionAtributo">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionReferencesAtributoRelacionBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="RelacionEntidadIzquierda" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionEntidadIzquierda" Tooltip="Relacion Entidad Izquierda" HelpKeyword="RelacionEntidadIzquierda">
+      <ConnectionTool Name="RelacionEntidadIzquierda" ToolboxIcon="Resources\RelacionIzquierda.bmp" Caption="RelacionEntidadIzquierda" Tooltip="Relacion Entidad Izquierda" HelpKeyword="RelacionEntidadIzquierda">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionIzquiedaReferencesEntidadDerechaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="RelacionEntidadDerecha" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionEntidadDerecha" Tooltip="Relacion Entidad Derecha" HelpKeyword="RelacionEntidadDerecha">
+      <ConnectionTool Name="RelacionEntidadDerecha" ToolboxIcon="Resources\RelacionDerecha.bmp" Caption="RelacionEntidadDerecha" Tooltip="Relacion Entidad Derecha" HelpKeyword="RelacionEntidadDerecha">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionDerechaReferencesEntidadIzquierdaBuilder" />
       </ConnectionTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Atributos">
+      <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\FormaAtributoRelacion.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
+        <DomainClassMoniker Name="AtributoRelacion" />
+      </ElementTool>
+      <ElementTool Name="AtributoEntidad" ToolboxIcon="Resources\FormaEntidadAtributo.bmp" Caption="AtributoEntidad" Tooltip="Atributo Entidad" HelpKeyword="AtributoEntidad">
+        <DomainClassMoniker Name="AtributoEntidad" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="DRQPJPFMAMPracticaDSLToolsDiagram" />

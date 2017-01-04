@@ -208,12 +208,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad)
-			{
-				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape newShape = new global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria)
 			{
 				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape newShape = new global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape(this.Partition);
@@ -223,6 +217,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			if(element is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacion)
 			{
 				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape newShape = new global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad)
+			{
+				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1 newShape = new global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -265,7 +265,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadShape.DecoratorsInitialized += EntidadShapeDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape.DecoratorsInitialized += AtributoEntidadShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape.DecoratorsInitialized += ClavePrimariaShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape.DecoratorsInitialized += AtributoRelacionShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape.DecoratorsInitialized += RelacionShapeDecoratorMap.OnDecoratorsInitialized;
@@ -285,24 +284,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for AtributoEntidadShape.
-		/// </summary>
-		internal static partial class AtributoEntidadShapeDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for AtributoEntidadShape.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -548,9 +529,9 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionReferencesAtributoRelacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -571,10 +552,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad)
-				{
-					parentElement = GetParentForAtributoEntidad((global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad)childElement);
-				} else
 				if(childElement is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria)
 				{
 					parentElement = GetParentForClavePrimaria((global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria)childElement);
@@ -582,6 +559,17 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				if(childElement is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacion)
 				{
 					parentElement = GetParentForAtributoRelacion((global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacion)childElement);
+				} else
+				if(childElement is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForAtributoEntidad(AtributoEntidad childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForAtributoEntidad((global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad)childElement);
 				} else
 				if(childElement is global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad)
 				{
@@ -604,16 +592,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Tapiz result = root.Tapiz;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Tapiz GetParentForAtributoEntidad( global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidad root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad root2 = root.Entidad;
-				if ( root2 == null ) return null;
-				// Segments 2 and 3
-				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Tapiz result = root2.Tapiz;
 				if ( result == null ) return null;
 				return result;
 			}

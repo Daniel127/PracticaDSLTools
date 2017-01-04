@@ -90,6 +90,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				typeof(ClavePrimariaShape),
 				typeof(AtributoRelacionShape),
 				typeof(RelacionShape),
+				typeof(ImageShape1),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged),
@@ -156,7 +157,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(16);
 				createElementMap.Add(typeof(Tapiz), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(AtributoEntidad), 2);
@@ -171,6 +172,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				createElementMap.Add(typeof(ClavePrimariaShape), 11);
 				createElementMap.Add(typeof(AtributoRelacionShape), 12);
 				createElementMap.Add(typeof(RelacionShape), 13);
+				createElementMap.Add(typeof(ImageShape1), 14);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -198,6 +200,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				case 11: return new ClavePrimariaShape(partition, propertyAssignments);
 				case 12: return new AtributoRelacionShape(partition, propertyAssignments);
 				case 13: return new RelacionShape(partition, propertyAssignments);
+				case 14: return new ImageShape1(partition, propertyAssignments);
 				default: return null;
 			}
 		}
