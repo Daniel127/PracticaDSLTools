@@ -37,61 +37,61 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 					0xff00ff,
 					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadesToolboxTab",
-					"@ClavePrimariaToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
-					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ClavePrimaria", 
-					"@ClavePrimariaToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
-					0xff00ff,
-					Index = 1)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadesToolboxTab",
 					"@RelacionToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Relacion", 
 					"@RelacionToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					0xff00ff,
-					Index = 2)]
-	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", "UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionesToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionesToolboxTab",
+					Index = 1)]
+	[VSShell::ProvideStaticToolboxGroup("@Relaciones (Conectores)ToolboxTab;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", "UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relaciones (Conectores)ToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relaciones (Conectores)ToolboxTab",
 					"@RelacionAtributoToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionAtributoToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"RelacionAtributo", 
 					"@RelacionAtributoToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					0xff00ff,
-					Index = 3)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionesToolboxTab",
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relaciones (Conectores)ToolboxTab",
 					"@RelacionEntidadIzquierdaToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionEntidadIzquierdaToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"RelacionEntidadIzquierda", 
 					"@RelacionEntidadIzquierdaToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionesToolboxTab",
+					Index = 3)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relaciones (Conectores)ToolboxTab",
 					"@RelacionEntidadDerechaToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionEntidadDerechaToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"RelacionEntidadDerecha", 
 					"@RelacionEntidadDerechaToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					0xff00ff,
-					Index = 5)]
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxGroup("@AtributosToolboxTab;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", "UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributosToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributosToolboxTab",
-					"@AtributoRelacionToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
-					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionToolboxItem", 
+					"@ClavePrimariaToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
+					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"AtributoRelacion", 
-					"@AtributoRelacionToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
+					"ClavePrimaria", 
+					"@ClavePrimariaToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					0xff00ff,
-					Index = 6)]
+					Index = 5)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributosToolboxTab",
 					"@AtributoEntidadToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"AtributoEntidad", 
 					"@AtributoEntidadToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributosToolboxTab",
+					"@AtributoRelacionToolboxItem;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
+					"UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoRelacion", 
+					"@AtributoRelacionToolboxBitmap;UPM_IPS.DRQPJPFMAMPracticaDSLTools.Dsl.dll", 
 					0xff00ff,
 					Index = 7)]
 	[VSShell::ProvideEditorFactory(typeof(DRQPJPFMAMPracticaDSLToolsEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]

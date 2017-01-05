@@ -633,14 +633,6 @@
     <value>Create an ExampleElement</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ClavePrimariaToolboxItem" xml:space="preserve">
-    <value>ClavePrimaria</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="ClavePrimariaToolboxTooltip" xml:space="preserve">
-    <value>Clave Primaria</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="RelacionToolboxItem" xml:space="preserve">
     <value>Relacion</value>
     <comment>Toolbox item name</comment>
@@ -649,8 +641,8 @@
     <value>Relacion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="RelacionesToolboxTab" xml:space="preserve">
-    <value>Relaciones</value>
+  <data name="Relaciones (Conectores)ToolboxTab" xml:space="preserve">
+    <value>Relaciones (Conectores)</value>
     <comment>Toolbox item tab name</comment>
   </data>
   <data name="RelacionAtributoToolboxItem" xml:space="preserve">
@@ -681,12 +673,12 @@
     <value>Atributos</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="AtributoRelacionToolboxItem" xml:space="preserve">
-    <value>AtributoRelacion</value>
+  <data name="ClavePrimariaToolboxItem" xml:space="preserve">
+    <value>ClavePrimaria</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="AtributoRelacionToolboxTooltip" xml:space="preserve">
-    <value>Atributo Relacion</value>
+  <data name="ClavePrimariaToolboxTooltip" xml:space="preserve">
+    <value>Clave Primaria</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="AtributoEntidadToolboxItem" xml:space="preserve">
@@ -695,6 +687,14 @@
   </data>
   <data name="AtributoEntidadToolboxTooltip" xml:space="preserve">
     <value>Atributo Entidad</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoRelacionToolboxItem" xml:space="preserve">
+    <value>AtributoRelacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoRelacionToolboxTooltip" xml:space="preserve">
+    <value>Atributo Relacion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -830,10 +830,6 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\FormaEntidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ClavePrimariaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaPrimaryKey.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
   <data name="RelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\FormaRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -850,12 +846,16 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\RelacionDerecha.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="AtributoRelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaAtributoRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ClavePrimariaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaPrimaryKey.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AtributoEntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\FormaEntidadAtributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoRelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaAtributoRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

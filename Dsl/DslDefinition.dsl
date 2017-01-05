@@ -260,7 +260,7 @@
   <Shapes>
     <GeometryShape Id="dd4edf64-49e3-4b4e-b653-0d85102e6b77" Description="Shape used to represent ExampleElements on a Diagram." Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Entidad Shape" FillColor="242, 239, 229" OutlineColor="113, 111, 110" InitialWidth="2" InitialHeight="0.75" OutlineThickness="0.01" Geometry="Rectangle">
       <Notes>The shape has a text decorator used to display the Name property of the mapped ExampleElement.</Notes>
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
@@ -599,14 +599,11 @@
         <Notes>Entidad del MER</Notes>
         <DomainClassMoniker Name="Entidad" />
       </ElementTool>
-      <ElementTool Name="ClavePrimaria" ToolboxIcon="Resources\FormaPrimaryKey.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria" HelpKeyword="ClavePrimaria">
-        <DomainClassMoniker Name="ClavePrimaria" />
-      </ElementTool>
       <ElementTool Name="Relacion" ToolboxIcon="Resources\FormaRelacion.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
         <DomainClassMoniker Name="Relacion" />
       </ElementTool>
     </ToolboxTab>
-    <ToolboxTab TabText="Relaciones">
+    <ToolboxTab TabText="Relaciones (Conectores)">
       <ConnectionTool Name="RelacionAtributo" ToolboxIcon="Resources\AtributoRelacion.bmp" Caption="RelacionAtributo" Tooltip="Relacion Atributo" HelpKeyword="RelacionAtributo">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionReferencesAtributoRelacionBuilder" />
       </ConnectionTool>
@@ -618,11 +615,14 @@
       </ConnectionTool>
     </ToolboxTab>
     <ToolboxTab TabText="Atributos">
-      <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\FormaAtributoRelacion.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
-        <DomainClassMoniker Name="AtributoRelacion" />
+      <ElementTool Name="ClavePrimaria" ToolboxIcon="Resources\FormaPrimaryKey.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria" HelpKeyword="ClavePrimaria">
+        <DomainClassMoniker Name="ClavePrimaria" />
       </ElementTool>
       <ElementTool Name="AtributoEntidad" ToolboxIcon="Resources\FormaEntidadAtributo.bmp" Caption="AtributoEntidad" Tooltip="Atributo Entidad" HelpKeyword="AtributoEntidad">
         <DomainClassMoniker Name="AtributoEntidad" />
+      </ElementTool>
+      <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\FormaAtributoRelacion.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
+        <DomainClassMoniker Name="AtributoRelacion" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
