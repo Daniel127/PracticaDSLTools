@@ -1,19 +1,6 @@
 ﻿
-		CREATE TABLE IF NOT EXISTS Alumno
+		CREATE TABLE IF NOT EXISTS Entidad1
 		(
-	Nombre
-Apellido1
-Apellido2
-		);
-			CREATE TABLE IF NOT EXISTS Asignatura
-		(
-	Nombre
-		);
-			CREATE TABLE IF NOT EXISTS Profesor
-		(
-	Nombre
-Apellido1
-Apellido2
-Email
+			Atributo1 CHAR(20) NOT NULL,
 		);
 	

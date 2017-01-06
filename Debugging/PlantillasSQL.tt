@@ -10,7 +10,7 @@ language="C#" hostspecific="True" #>
 		(
 	<#
 		foreach(Atributo atributo in entidad.AtributoEntidad){
-			WriteLine(atributo.Name);
+			WriteLine(atributo.Name + " " + atributo.Tipo + (atributo.EsNull ? "," : " NOT NULL,"));
 		}
 	#>
 		);

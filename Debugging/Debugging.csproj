@@ -51,10 +51,6 @@
     <None Include="Sample.DJMProyIPS.diagram">
       <DependentUpon>Sample.DJMProyIPS</DependentUpon>
     </None>
-    <None Include="Test.DJMProyIPS" />
-    <None Include="Test.DJMProyIPS.diagram">
-      <DependentUpon>Test.DJMProyIPS</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />

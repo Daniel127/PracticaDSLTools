@@ -107,6 +107,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				new DomainMemberInfo(typeof(Entidad), "Name", Entidad.NameDomainPropertyId, typeof(Entidad.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "Name", Atributo.NameDomainPropertyId, typeof(Atributo.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "Tipo", Atributo.TipoDomainPropertyId, typeof(Atributo.TipoPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "EsNull", Atributo.EsNullDomainPropertyId, typeof(Atributo.EsNullPropertyHandler)),
 				new DomainMemberInfo(typeof(Relacion), "Name", Relacion.NameDomainPropertyId, typeof(Relacion.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Relacion), "CardinalidadIzquierda", Relacion.CardinalidadIzquierdaDomainPropertyId, typeof(Relacion.CardinalidadIzquierdaPropertyHandler)),
 				new DomainMemberInfo(typeof(Relacion), "CardinalidadDerecha", Relacion.CardinalidadDerechaDomainPropertyId, typeof(Relacion.CardinalidadDerechaPropertyHandler)),

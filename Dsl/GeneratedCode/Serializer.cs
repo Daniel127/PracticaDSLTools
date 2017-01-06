@@ -3104,6 +3104,40 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 					}
 				}
 			}
+			// Tipo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribTipo = DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipo");
+				if (attribTipo != null)
+				{
+					global::System.String valueOfTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipo, out valueOfTipo))
+					{
+						instanceOfAtributo.Tipo = valueOfTipo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipo", typeof(global::System.String), attribTipo);
+					}
+				}
+			}
+			// EsNull
+			if (!serializationContext.Result.Failed)
+			{
+				string attribEsNull = DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "esNull");
+				if (attribEsNull != null)
+				{
+					global::System.Boolean valueOfEsNull;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribEsNull, out valueOfEsNull))
+					{
+						instanceOfAtributo.EsNull = valueOfEsNull;
+					}
+					else
+					{	// Invalid property value, ignored.
+						DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "esNull", typeof(global::System.Boolean), attribEsNull);
+					}
+				}
+			}
 		}
 	
 		#region TryCreateInstance
@@ -3397,6 +3431,27 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				if (!serializationContext.Result.Failed)
 				{
 					DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "name", propValue);
+				}
+			}
+			// Tipo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfAtributo.Tipo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipo", propValue);
+	
+				}
+			}
+			// EsNull
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.Boolean propValue = instanceOfAtributo.EsNull;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "esNull", serializedPropValue);
 				}
 			}
 		}

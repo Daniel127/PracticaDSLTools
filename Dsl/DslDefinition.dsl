@@ -75,6 +75,16 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="1f07eb18-6011-482c-8af5-f161a24d526f" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Tipo" Name="Tipo" DisplayName="Tipo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="92c4ff8f-5e40-4288-b5af-def28b8fef8a" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Es Null" Name="EsNull" DisplayName="Es Null">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="dc343253-fc7f-4843-8172-a09f94e1bbf5" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion" Name="Relacion" DisplayName="Relacion" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools">
@@ -356,6 +366,12 @@
         <ElementData>
           <XmlPropertyData XmlName="name" IsMonikerKey="true">
             <DomainPropertyMoniker Name="Atributo/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipo">
+            <DomainPropertyMoniker Name="Atributo/Tipo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="esNull">
+            <DomainPropertyMoniker Name="Atributo/EsNull" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

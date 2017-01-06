@@ -181,6 +181,22 @@
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/Tipo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Tipo</value>
+    <comment>Description for DomainProperty &apos;Tipo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/Tipo.DisplayName" xml:space="preserve">
+    <value>Tipo</value>
+    <comment>DisplayName for DomainProperty &apos;Tipo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/EsNull.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Es Null</value>
+    <comment>Description for DomainProperty &apos;EsNull&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/EsNull.DisplayName" xml:space="preserve">
+    <value>Es Null</value>
+    <comment>DisplayName for DomainProperty &apos;EsNull&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion</value>
     <comment>Description for DomainClass &apos;Relacion&apos;</comment>

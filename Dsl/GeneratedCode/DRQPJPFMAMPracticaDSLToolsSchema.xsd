@@ -232,6 +232,10 @@
         </xsd:attribute>
         <!-- Property: Name -->
         <xsd:attribute name="name" type="xsd:string" use="required" />
+        <!-- Property: Tipo -->
+        <xsd:attribute name="tipo" type="xsd:string" />
+        <!-- Property: EsNull -->
+        <xsd:attribute name="esNull" type="xsd:boolean" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

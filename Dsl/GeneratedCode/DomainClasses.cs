@@ -835,6 +835,180 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		#endregion
+		#region Tipo domain property code
+		
+		/// <summary>
+		/// Tipo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoDomainPropertyId = new global::System.Guid(0x1f07eb18, 0x6011, 0x482c, 0x8a, 0xf5, 0xf1, 0x61, 0xa2, 0x4d, 0x52, 0x6f);
+		
+		/// <summary>
+		/// Storage for Tipo
+		/// </summary>
+		private global::System.String tipoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Tipo domain property.
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Tipo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/Tipo.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/Tipo.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1f07eb18-6011-482c-8af5-f161a24d526f")]
+		public global::System.String Tipo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.Tipo domain property.
+		/// </summary>
+		internal sealed partial class TipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
+		{
+			private TipoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.Tipo domain property value handler.
+			/// </summary>
+			public static readonly TipoPropertyHandler Instance = new TipoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.Tipo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region EsNull domain property code
+		
+		/// <summary>
+		/// EsNull domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid EsNullDomainPropertyId = new global::System.Guid(0x92c4ff8f, 0x5e40, 0x4288, 0xb5, 0xaf, 0xde, 0xf2, 0x8b, 0x8f, 0xef, 0x8a);
+		
+		/// <summary>
+		/// Storage for EsNull
+		/// </summary>
+		private global::System.Boolean esNullPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of EsNull domain property.
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Es Null
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/EsNull.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/EsNull.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("92c4ff8f-5e40-4288-b5af-def28b8fef8a")]
+		public global::System.Boolean EsNull
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return esNullPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				EsNullPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.EsNull domain property.
+		/// </summary>
+		internal sealed partial class EsNullPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.Boolean>
+		{
+			private EsNullPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.EsNull domain property value handler.
+			/// </summary>
+			public static readonly EsNullPropertyHandler Instance = new EsNullPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.EsNull domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return EsNullDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.esNullPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.esNullPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
