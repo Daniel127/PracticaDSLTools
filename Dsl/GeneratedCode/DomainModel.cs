@@ -540,4 +540,51 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		UnoN = 3,
 	}
 }
+namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
+{
+	/// <summary>
+	/// DomainEnumeration: TipoAtributo
+	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TipoAtributo
+	{
+		/// <summary>
+		/// String
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.String
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/String.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		String,
+		/// <summary>
+		/// Integer
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Integer
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Integer.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		Integer,
+		/// <summary>
+		/// Boolean
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Boolean
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Boolean.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		Boolean,
+		/// <summary>
+		/// Char
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Char
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Char.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		Char,
+		/// <summary>
+		/// Double
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Double
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Double.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		Double,
+		/// <summary>
+		/// Float
+		/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Float
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Float.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+		Float,
+	}
+}
 

@@ -845,7 +845,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <summary>
 		/// Storage for Tipo
 		/// </summary>
-		private global::System.String tipoPropertyStorage = string.Empty;
+		private TipoAtributo tipoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of Tipo domain property.
@@ -854,7 +854,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/Tipo.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo/Tipo.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("1f07eb18-6011-482c-8af5-f161a24d526f")]
-		public global::System.String Tipo
+		public TipoAtributo Tipo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -870,7 +870,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <summary>
 		/// Value handler for the Atributo.Tipo domain property.
 		/// </summary>
-		internal sealed partial class TipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
+		internal sealed partial class TipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, TipoAtributo>
 		{
 			private TipoPropertyHandler() { }
 		
@@ -896,7 +896,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributo element)
+			public override sealed TipoAtributo GetValue(Atributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoPropertyStorage;
@@ -907,11 +907,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.String newValue)
+			public override sealed void SetValue(Atributo element, TipoAtributo newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoAtributo oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

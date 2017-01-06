@@ -4,7 +4,7 @@
     <entidad Id="55058ccd-ff77-4b74-b19d-e86664036230" name="Entidad1">
       <atributoEntidad>
         <entidadHasAtributoEntidad Id="f8cbdbe4-8742-49b4-a64d-6d6752aafb39">
-          <atributoEntidad Id="a8275239-cd56-457c-a00d-da5c0baa99cb" name="Atributo1" tipo="CHAR(20)" esNull="false" />
+          <atributoEntidad Id="a8275239-cd56-457c-a00d-da5c0baa99cb" name="Atributo1" tipo="Char" esNull="false" />
         </entidadHasAtributoEntidad>
       </atributoEntidad>
       <clavePrimaria>

@@ -233,7 +233,7 @@
         <!-- Property: Name -->
         <xsd:attribute name="name" type="xsd:string" use="required" />
         <!-- Property: Tipo -->
-        <xsd:attribute name="tipo" type="xsd:string" />
+        <xsd:attribute name="tipo" type="TipoAtributo" />
         <!-- Property: EsNull -->
         <xsd:attribute name="esNull" type="xsd:boolean" />
       </xsd:extension>
@@ -699,6 +699,18 @@
       <xsd:enumeration value="CeroN"/>
       <xsd:enumeration value="UnoUno"/>
       <xsd:enumeration value="UnoN"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TipoAtributo -->
+  <xsd:simpleType name="TipoAtributo">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="String"/>
+      <xsd:enumeration value="Integer"/>
+      <xsd:enumeration value="Boolean"/>
+      <xsd:enumeration value="Char"/>
+      <xsd:enumeration value="Double"/>
+      <xsd:enumeration value="Float"/>
     </xsd:restriction>
   </xsd:simpleType>
   

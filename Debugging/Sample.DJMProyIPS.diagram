@@ -10,7 +10,7 @@
         </imageShape1>
       </nestedChildShapes>
     </entidadShape>
-    <relacionShape Id="3ed1de44-1e53-4b93-8304-6b17567c672f" absoluteBounds="5.375, 1.75, 1.5, 1.5">
+    <relacionShape Id="3ed1de44-1e53-4b93-8304-6b17567c672f" absoluteBounds="5.75, 1.75, 1.5, 1.5">
       <relacionMoniker Id="b0f55704-9cf0-46bd-b48e-079dfc5b2604" />
       <relativeChildShapes />
     </relacionShape>

@@ -525,6 +525,54 @@
     <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Cardinalidad.UnoN</value>
     <comment>Description for EnumerationLiteral &apos;UnoN&apos; on DomainEnumeration &apos;Cardinalidad&apos;</comment>
   </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/String.DisplayName" xml:space="preserve">
+    <value>String</value>
+    <comment>Display name for EnumerationLiteral &apos;String&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/String.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.String</value>
+    <comment>Description for EnumerationLiteral &apos;String&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Integer.DisplayName" xml:space="preserve">
+    <value>Integer</value>
+    <comment>Display name for EnumerationLiteral &apos;Integer&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Integer.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Integer</value>
+    <comment>Description for EnumerationLiteral &apos;Integer&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Boolean.DisplayName" xml:space="preserve">
+    <value>Boolean</value>
+    <comment>Display name for EnumerationLiteral &apos;Boolean&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Boolean.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Boolean</value>
+    <comment>Description for EnumerationLiteral &apos;Boolean&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Char.DisplayName" xml:space="preserve">
+    <value>Char</value>
+    <comment>Display name for EnumerationLiteral &apos;Char&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Char.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Char</value>
+    <comment>Description for EnumerationLiteral &apos;Char&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Double.DisplayName" xml:space="preserve">
+    <value>Double</value>
+    <comment>Display name for EnumerationLiteral &apos;Double&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Double.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Double</value>
+    <comment>Description for EnumerationLiteral &apos;Double&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Float.DisplayName" xml:space="preserve">
+    <value>Float</value>
+    <comment>Display name for EnumerationLiteral &apos;Float&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo/Float.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Float</value>
+    <comment>Description for EnumerationLiteral &apos;Float&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadShape.Description" xml:space="preserve">
     <value>Shape used to represent ExampleElements on a Diagram.</value>
     <comment>Description for DomainClass &apos;EntidadShape&apos;</comment>

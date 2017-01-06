@@ -3110,14 +3110,14 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				string attribTipo = DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipo");
 				if (attribTipo != null)
 				{
-					global::System.String valueOfTipo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipo, out valueOfTipo))
+					TipoAtributo valueOfTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoAtributo>(serializationContext, attribTipo, out valueOfTipo))
 					{
 						instanceOfAtributo.Tipo = valueOfTipo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipo", typeof(global::System.String), attribTipo);
+						DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipo", typeof(TipoAtributo), attribTipo);
 					}
 				}
 			}
@@ -3436,12 +3436,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			// Tipo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAtributo.Tipo;
+				TipoAtributo propValue = instanceOfAtributo.Tipo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoAtributo>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipo", propValue);
-	
+					DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipo", serializedPropValue);
 				}
 			}
 			// EsNull

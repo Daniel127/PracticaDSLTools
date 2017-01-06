@@ -77,7 +77,7 @@
         </DomainProperty>
         <DomainProperty Id="1f07eb18-6011-482c-8af5-f161a24d526f" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Tipo" Name="Tipo" DisplayName="Tipo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="TipoAtributo" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="92c4ff8f-5e40-4288-b5af-def28b8fef8a" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.Es Null" Name="EsNull" DisplayName="Es Null">
@@ -264,6 +264,16 @@
         <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Cardinalidad.CeroN" Name="CeroN" Value="1" />
         <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Cardinalidad.UnoUno" Name="UnoUno" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.Cardinalidad.UnoN" Name="UnoN" Value="3" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="TipoAtributo" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.String" Name="String" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Integer" Name="Integer" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Boolean" Name="Boolean" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Char" Name="Char" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Double" Name="Double" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Float" Name="Float" Value="" />
       </Literals>
     </DomainEnumeration>
   </Types>
