@@ -1,0 +1,5 @@
+Nuevo fichero por entidad que haya en el tapiz
+Clase
+Prefijo
+Sufijo
+Curso

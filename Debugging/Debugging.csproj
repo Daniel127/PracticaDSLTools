@@ -1,11 +1,12 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1c0ae136-f7d0-428c-8c84-0a1884f5c027}</ProjectGuid>
+    <ProjectGuid>{1C0AE136-F7D0-428C-8C84-0A1884F5C027}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -44,15 +45,9 @@
       <SubType>
       </SubType>
     </None>
-    <None Include="DRQPJPFMAMPracticaDSLToolsReport.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DRQPJPFMAMPracticaDSLToolsReport.txt</LastGenOutput>
+    <None Include="Sample.DJMProyIPS">
+      <SubType>Designer</SubType>
     </None>
-    <None Include="DRQPJPFMAMPracticaDSLToolsReportVB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DRQPJPFMAMPracticaDSLToolsReportVB.txt</LastGenOutput>
-    </None>
-    <None Include="Sample.DJMProyIPS" />
     <None Include="Sample.DJMProyIPS.diagram">
       <DependentUpon>Sample.DJMProyIPS</DependentUpon>
     </None>
@@ -65,15 +60,20 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DRQPJPFMAMPracticaDSLToolsReport.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DRQPJPFMAMPracticaDSLToolsReport.tt</DependentUpon>
+    <Content Include="Clase.txt">
+      <DependentUpon>PlantillasSQL.tt</DependentUpon>
     </Content>
-    <Content Include="DRQPJPFMAMPracticaDSLToolsReportVB.txt">
+    <Content Include="PlantillasSQL.sql">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DRQPJPFMAMPracticaDSLToolsReportVB.tt</DependentUpon>
+      <DependentUpon>PlantillasSQL.tt</DependentUpon>
+    </Content>
+    <Content Include="PlantillasSQL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PlantillasSQL.sql</LastGenOutput>
+    </Content>
+    <Content Include="Prueba.txt">
+      <DependentUpon>PlantillasSQL.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,19 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"
+language="C#" hostspecific="True" #>
+<#@ output extension=".sql" #>
+<#@ DRQPJPFMAMPracticaDSLTools processor="DRQPJPFMAMPracticaDSLToolsDirectiveProcessor" requires="fileName='Sample.DJMProyIPS'" #>
+
+<#
+	foreach(Entidad entidad in this.Tapiz.Elements){
+	#>
+		CREATE TABLE IF NOT EXISTS <# WriteLine(entidad.Name); #>
+		(
+	<#
+		foreach(Atributo atributo in entidad.AtributoEntidad){
+			WriteLine(atributo.Name);
+		}
+	#>
+		);
+	<#
+	}
+#>

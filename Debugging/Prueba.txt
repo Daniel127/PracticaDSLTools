@@ -1,0 +1,4 @@
+Nuevo fichero por entidad que haya en el tapiz
+Prueba
+AttrPrueba
+Probando
