@@ -2,18 +2,108 @@
 language="C#" hostspecific="True" #>
 <#@ output extension=".sql" #>
 <#@ DRQPJPFMAMPracticaDSLTools processor="DRQPJPFMAMPracticaDSLToolsDirectiveProcessor" requires="fileName='Sample.DJMProyIPS'" #>
+CREATE DATABASE SampleBD;
+USE SampleBD;
 
 <#
-	foreach(Entidad entidad in this.Tapiz.Elements){
+	foreach(Entidad entidad in this.Tapiz.Elements)
+	{
 	#>
-		CREATE TABLE IF NOT EXISTS <# WriteLine(entidad.Name); #>
-		(
-	<#
-		foreach(Atributo atributo in entidad.AtributoEntidad){
-			WriteLine(atributo.Name + " " + atributo.Tipo + (atributo.EsNull ? "," : " NOT NULL,"));
+CREATE TABLE IF NOT EXISTS <# WriteLine(entidad.Name); #>
+(
+	<#	
+		WriteLine(entidad.ClavePrimaria.Name + " " + GenerarTipo(entidad.ClavePrimaria.Tipo) + " NOT NULL,");
+		foreach(Atributo atributo in entidad.AtributoEntidad)
+		{
+			WriteLine("\t" + atributo.Name + " " + GenerarTipo(atributo.Tipo) + (atributo.EsNull ? "," : " NOT NULL,"));
+		}
+		if(entidad.RelacionDerecha.Count > 0){
+			int i = 1;
+			foreach(Relacion relacion in entidad.RelacionDerecha){
+				if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
+					relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+					(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
+					relacion.CardinalidadDerecha == Cardinalidad.CeroN)) &&
+					(relacion.CardinalidadDerecha == Cardinalidad.CeroUno ||
+					relacion.CardinalidadDerecha == Cardinalidad.UnoUno))
+				{
+					WriteLine(relacion.EntidadDerecha.ClavePrimaria.Name + " " + GenerarTipo(relacion.EntidadDerecha.ClavePrimaria.Tipo) + ((relacion.CardinalidadDerecha == Cardinalidad.CeroN || relacion.CardinalidadDerecha == Cardinalidad.CeroUno) ? "," : " NOT NULL,"));
+	#>
+	FOREIGN KEY (<#= relacion.EntidadDerecha.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadDerecha.Name#> (<#=relacion.EntidadDerecha.ClavePrimaria.Name#>)<#= i == entidad.RelacionDerecha.Count? "":","#>
+	<#			}
+				i++;
+			}
+		}
+		if(entidad.RelacionIzquierda.Count > 0){
+			int i = 1;
+			foreach(Relacion relacion in entidad.RelacionIzquierda){
+				if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
+					relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+					(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
+					relacion.CardinalidadDerecha == Cardinalidad.CeroN)) &&
+					(relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || 
+					relacion.CardinalidadIzquierda == Cardinalidad.UnoUno))
+				{
+					WriteLine("\t" + relacion.EntidadIzquieda.ClavePrimaria.Name + " " + GenerarTipo(relacion.EntidadIzquieda.ClavePrimaria.Tipo) + ((relacion.CardinalidadIzquierda == Cardinalidad.CeroN || relacion.CardinalidadIzquierda == Cardinalidad.CeroUno) ? "," : " NOT NULL,"));
+	#>
+	FOREIGN KEY (<#= relacion.EntidadIzquieda.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadIzquieda.Name#> (<#=relacion.EntidadIzquieda.ClavePrimaria.Name#>),
+<#
+				}
+			}
+			i++;
 		}
 	#>
-		);
+	PRIMARY KEY(<#=entidad.ClavePrimaria.Name #>)
+);
 	<#
+	WriteLine("");
+	}
+
+
+	foreach(Relacion relacion in this.Tapiz.Relacion){
+		if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+			(relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN))
+		{
+#>
+CREATE TABLE IF NOT EXISTS <# WriteLine(relacion.Name); #>
+(
+	<#
+			foreach(Atributo atributo in relacion.AtributoRelacion)
+			{
+				WriteLine("\t" + atributo.Name + " " + GenerarTipo(atributo.Tipo) + (atributo.EsNull ? "," : " NOT NULL,"));
+			}
+			WriteLine(relacion.EntidadDerecha.ClavePrimaria.Name + " " + GenerarTipo(relacion.EntidadDerecha.ClavePrimaria.Tipo) + ((relacion.CardinalidadDerecha == Cardinalidad.CeroN)? "," : " NOT NULL,"));
+	#>
+	FOREIGN KEY (<#= relacion.EntidadDerecha.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadDerecha.Name#> (<#=relacion.EntidadDerecha.ClavePrimaria.Name#>),
+<#
+			WriteLine("\t" + relacion.EntidadIzquieda.ClavePrimaria.Name + " " + GenerarTipo(relacion.EntidadIzquieda.ClavePrimaria.Tipo) + ((relacion.CardinalidadIzquierda == Cardinalidad.CeroN)? "," : " NOT NULL,"));
+	#>
+	FOREIGN KEY (<#= relacion.EntidadIzquieda.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadIzquieda.Name#> (<#=relacion.EntidadIzquieda.ClavePrimaria.Name#>)
+<#
+		}
+#>
+);
+<#
+	}
+#>
+
+<#+
+	private string GenerarTipo(TipoAtributo tipo){
+		switch(tipo)
+		{
+			case TipoAtributo.String:
+				return "CHAR(20)";
+			case TipoAtributo.Integer:
+				return "INTEGER";
+			case TipoAtributo.Boolean:
+				return "BOOLEAN";
+			case TipoAtributo.Char:
+				return "CHAR";
+			case TipoAtributo.Double:
+				return "DOUBLE";
+			case TipoAtributo.Float:
+				return "FLOAT";
+		}
+		return "";
 	}
 #>

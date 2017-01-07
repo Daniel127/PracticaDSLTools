@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7f3450ee-c6be-4359-9a7f-0583589c4eb4" xmlns="http://schemas.microsoft.com/dsltools/DRQPJPFMAMPracticaDSLTools">
   <elements>
-    <entidad Id="55058ccd-ff77-4b74-b19d-e86664036230" name="Entidad1">
+    <entidad Id="55058ccd-ff77-4b74-b19d-e86664036230" name="Cliente">
       <atributoEntidad>
         <entidadHasAtributoEntidad Id="f8cbdbe4-8742-49b4-a64d-6d6752aafb39">
           <atributoEntidad Id="a8275239-cd56-457c-a00d-da5c0baa99cb" name="Atributo1" tipo="Char" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="f3a14d44-4642-4b47-8ed1-1619550d1ad1">
+          <atributoEntidad Id="9dcc8be9-3285-41c3-babd-b74780a4f8de" name="AtributoEntidad1" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="01b15878-1e5c-4a92-94fc-7bcdc470a74a">
+          <atributoEntidad Id="c37530aa-ae0c-4da1-af2f-6e3c9e56d0e1" name="AtributoEntidad2" tipo="String" esNull="false" />
         </entidadHasAtributoEntidad>
       </atributoEntidad>
       <clavePrimaria>
@@ -13,10 +19,33 @@
         </entidadHasClavePrimaria>
       </clavePrimaria>
     </entidad>
+    <entidad Id="ca2d090c-01f1-47f5-b403-eabdb2783916" name="Pedido">
+      <atributoEntidad>
+        <entidadHasAtributoEntidad Id="acbcdb41-7c4c-4d91-9b0e-ec4ffc485a7b">
+          <atributoEntidad Id="5d54146a-f7de-42db-b91f-f1a8227427c2" name="AtributoEntidad1" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+      </atributoEntidad>
+      <clavePrimaria>
+        <entidadHasClavePrimaria Id="c219056d-ad52-447f-9af0-e91648667602">
+          <clavePrimaria Id="9e03356f-f2d9-4a4a-a23e-b81140d3e8fa" name="Codigo" tipo="String" esNull="false" />
+        </entidadHasClavePrimaria>
+      </clavePrimaria>
+    </entidad>
   </elements>
   <relacion>
     <tapizHasRelacion Id="f42f1593-2cf7-4ca5-b504-a480f67cfbf9">
-      <relacion Id="b0f55704-9cf0-46bd-b48e-079dfc5b2604" name="Relacion1" cardinalidadIzquierda="CeroUno" cardinalidadDerecha="CeroUno" />
+      <relacion Id="b0f55704-9cf0-46bd-b48e-079dfc5b2604" name="Relacion1" cardinalidadIzquierda="CeroN" cardinalidadDerecha="CeroN">
+        <entidadDerecha>
+          <relacionIzquiedaReferencesEntidadDerecha Id="ea0a95a5-5917-4f99-a4d8-2515b4ff7389">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Pedido" />
+          </relacionIzquiedaReferencesEntidadDerecha>
+        </entidadDerecha>
+        <entidadIzquieda>
+          <relacionDerechaReferencesEntidadIzquierda Id="eaf7bda1-39ec-4593-8da8-890d45215d62">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Cliente" />
+          </relacionDerechaReferencesEntidadIzquierda>
+        </entidadIzquieda>
+      </relacion>
     </tapizHasRelacion>
   </relacion>
 </tapiz>
