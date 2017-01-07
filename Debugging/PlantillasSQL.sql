@@ -1,5 +1,5 @@
-﻿CREATE DATABASE GestionMat;
-USE GestionMat;
+﻿CREATE DATABASE SampleBD;
+USE SampleBD;
 
 CREATE TABLE IF NOT EXISTS Cliente
 (

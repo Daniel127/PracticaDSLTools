@@ -2,8 +2,8 @@
 language="C#" hostspecific="True" #>
 <#@ output extension=".sql" #>
 <#@ DRQPJPFMAMPracticaDSLTools processor="DRQPJPFMAMPracticaDSLToolsDirectiveProcessor" requires="fileName='Sample.DJMProyIPS'" #>
-CREATE DATABASE GestionMat;
-USE GestionMat;
+CREATE DATABASE SampleBD;
+USE SampleBD;
 
 <#
 	foreach(Entidad entidad in this.Tapiz.Elements)
