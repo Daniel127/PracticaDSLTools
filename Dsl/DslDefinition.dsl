@@ -278,29 +278,23 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <GeometryShape Id="dd4edf64-49e3-4b4e-b653-0d85102e6b77" Description="Shape used to represent ExampleElements on a Diagram." Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Entidad Shape" FillColor="242, 239, 229" OutlineColor="113, 111, 110" InitialWidth="2" InitialHeight="0.75" OutlineThickness="0.01" Geometry="Rectangle">
-      <Notes>The shape has a text decorator used to display the Name property of the mapped ExampleElement.</Notes>
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
-      </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="af5b4b6a-214e-43ca-943e-032263a11cea" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape" Name="AtributoEntidadShape" DisplayName="Atributo Entidad Shape" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Atributo Entidad Shape" InitialHeight="1" Geometry="Ellipse">
+    <ImageShape Id="7dca74e6-e383-4fd9-a058-0ea7872fed27" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo" Name="FormaAtributo" DisplayName="Forma Atributo" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Forma Atributo" InitialHeight="1" Image="Resources\FormaAtributo1.png">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="1e443832-8cab-491c-b84f-f9a85e71018f" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape" Name="ClavePrimariaShape" DisplayName="Clave Primaria Shape" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Clave Primaria Shape" InitialHeight="1" Geometry="Ellipse">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontStyle="Bold, Underline" />
+    </ImageShape>
+    <ImageShape Id="ad55c9e0-9f17-46ac-aa0d-61609a557b72" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad" Name="FormaEntidad" DisplayName="Forma Entidad" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Forma Entidad" InitialHeight="1" Image="Resources\FormaEntidad1.png">
+      <ShapeHasDecorators Position="OuterBottomCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="dbf5971d-c3e8-4efb-8b90-750c9c72ba76" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape" Name="AtributoRelacionShape" DisplayName="Atributo Relacion Shape" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Atributo Relacion Shape" InitialHeight="1" Geometry="Rectangle">
+    </ImageShape>
+    <ImageShape Id="f4c8bb3c-6c7f-4d97-baec-4a5a21ee564e" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion" Name="FormaAtributoRelacion" DisplayName="Forma Atributo Relacion" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Forma Atributo Relacion" InitialHeight="1" Image="Resources\FormaAtributoRelacion2.png">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="9562d647-833d-4369-acb7-2dafa497e7fb" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape" Name="RelacionShape" DisplayName="Relacion Shape" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Relacion Shape" InitialHeight="1" Geometry="Circle">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+    </ImageShape>
+    <ImageShape Id="7b4c5830-c7d8-4db7-b6de-64546c8383dc" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion" Name="FormaRelacion" DisplayName="Forma Relacion" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Forma Relacion" InitialHeight="1" Image="Resources\FormaRelacion.png">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="OuterMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
@@ -309,8 +303,8 @@
       <ShapeHasDecorators Position="OuterMiddleRight" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="CardinalidadDerDecorator" DisplayName="Cardinalidad Der Decorator" DefaultText="CardinalidadDerDecorator" />
       </ShapeHasDecorators>
-    </GeometryShape>
-    <ImageShape Id="7dca74e6-e383-4fd9-a058-0ea7872fed27" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1" Name="ImageShape1" DisplayName="Image Shape1" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Image Shape1" InitialHeight="1" Image="Resources\untitled (3).png">
+    </ImageShape>
+    <ImageShape Id="573744de-0ad8-45b8-a3ff-fc5a40f8c7bd" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria" Name="FormaClavePrimaria" DisplayName="Forma Clave Primaria" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Forma Clave Primaria" InitialWidth="0.5" InitialHeight="0.8" Image="Resources\FormaClavePrimaria.png">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
@@ -353,9 +347,6 @@
       <XmlClassData TypeName="TapizHasEntidades" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasEntidadesMoniker" ElementName="tapizHasEntidades" MonikerTypeName="TapizHasEntidadesMoniker">
         <DomainRelationshipMoniker Name="TapizHasEntidades" />
       </XmlClassData>
-      <XmlClassData TypeName="EntidadShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadShapeMoniker" ElementName="entidadShape" MonikerTypeName="EntidadShapeMoniker">
-        <GeometryShapeMoniker Name="EntidadShape" />
-      </XmlClassData>
       <XmlClassData TypeName="DRQPJPFMAMPracticaDSLToolsDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="dRQPJPFMAMPracticaDSLToolsDiagramMoniker" ElementName="dRQPJPFMAMPracticaDSLToolsDiagram" MonikerTypeName="DRQPJPFMAMPracticaDSLToolsDiagramMoniker">
         <DiagramMoniker Name="DRQPJPFMAMPracticaDSLToolsDiagram" />
       </XmlClassData>
@@ -384,12 +375,6 @@
             <DomainPropertyMoniker Name="Atributo/EsNull" />
           </XmlPropertyData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="AtributoEntidadShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoEntidadShapeMoniker" ElementName="atributoEntidadShape" MonikerTypeName="AtributoEntidadShapeMoniker">
-        <GeometryShapeMoniker Name="AtributoEntidadShape" />
-      </XmlClassData>
-      <XmlClassData TypeName="ClavePrimariaShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="clavePrimariaShapeMoniker" ElementName="clavePrimariaShape" MonikerTypeName="ClavePrimariaShapeMoniker">
-        <GeometryShapeMoniker Name="ClavePrimariaShape" />
       </XmlClassData>
       <XmlClassData TypeName="TapizHasRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasRelacionMoniker" ElementName="tapizHasRelacion" MonikerTypeName="TapizHasRelacionMoniker">
         <DomainRelationshipMoniker Name="TapizHasRelacion" />
@@ -429,12 +414,6 @@
       <XmlClassData TypeName="RelacionIzquiedaReferencesEntidadDerecha" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionIzquiedaReferencesEntidadDerechaMoniker" ElementName="relacionIzquiedaReferencesEntidadDerecha" MonikerTypeName="RelacionIzquiedaReferencesEntidadDerechaMoniker">
         <DomainRelationshipMoniker Name="RelacionIzquiedaReferencesEntidadDerecha" />
       </XmlClassData>
-      <XmlClassData TypeName="AtributoRelacionShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoRelacionShapeMoniker" ElementName="atributoRelacionShape" MonikerTypeName="AtributoRelacionShapeMoniker">
-        <GeometryShapeMoniker Name="AtributoRelacionShape" />
-      </XmlClassData>
-      <XmlClassData TypeName="RelacionShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionShapeMoniker" ElementName="relacionShape" MonikerTypeName="RelacionShapeMoniker">
-        <GeometryShapeMoniker Name="RelacionShape" />
-      </XmlClassData>
       <XmlClassData TypeName="RelacionAtributoConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionAtributoConnectorMoniker" ElementName="relacionAtributoConnector" MonikerTypeName="RelacionAtributoConnectorMoniker">
         <ConnectorMoniker Name="RelacionAtributoConnector" />
       </XmlClassData>
@@ -444,8 +423,20 @@
       <XmlClassData TypeName="RelacionDerechaReferencesEntidadIzquierda" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionDerechaReferencesEntidadIzquierdaMoniker" ElementName="relacionDerechaReferencesEntidadIzquierda" MonikerTypeName="RelacionDerechaReferencesEntidadIzquierdaMoniker">
         <DomainRelationshipMoniker Name="RelacionDerechaReferencesEntidadIzquierda" />
       </XmlClassData>
-      <XmlClassData TypeName="ImageShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="imageShape1Moniker" ElementName="imageShape1" MonikerTypeName="ImageShape1Moniker">
-        <ImageShapeMoniker Name="ImageShape1" />
+      <XmlClassData TypeName="FormaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="formaAtributoMoniker" ElementName="formaAtributo" MonikerTypeName="FormaAtributoMoniker">
+        <ImageShapeMoniker Name="FormaAtributo" />
+      </XmlClassData>
+      <XmlClassData TypeName="FormaEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="formaEntidadMoniker" ElementName="formaEntidad" MonikerTypeName="FormaEntidadMoniker">
+        <ImageShapeMoniker Name="FormaEntidad" />
+      </XmlClassData>
+      <XmlClassData TypeName="FormaAtributoRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="formaAtributoRelacionMoniker" ElementName="formaAtributoRelacion" MonikerTypeName="FormaAtributoRelacionMoniker">
+        <ImageShapeMoniker Name="FormaAtributoRelacion" />
+      </XmlClassData>
+      <XmlClassData TypeName="FormaRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="formaRelacionMoniker" ElementName="formaRelacion" MonikerTypeName="FormaRelacionMoniker">
+        <ImageShapeMoniker Name="FormaRelacion" />
+      </XmlClassData>
+      <XmlClassData TypeName="FormaClavePrimaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="formaClavePrimariaMoniker" ElementName="formaClavePrimaria" MonikerTypeName="FormaClavePrimariaMoniker">
+        <ImageShapeMoniker Name="FormaClavePrimaria" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -514,88 +505,40 @@
       <DomainClassMoniker Name="Tapiz" />
     </Class>
     <ShapeMaps>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="AtributoEntidad" />
+        <ParentElementPath>
+          <DomainPath>EntidadHasAtributoEntidad.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <ImageShapeMoniker Name="FormaAtributo" />
+      </ShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="Entidad" />
         <ParentElementPath>
           <DomainPath>TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="EntidadShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Entidad/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="EntidadShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="ClavePrimaria" />
-        <ParentElementPath>
-          <DomainPath>EntidadHasClavePrimaria.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ClavePrimariaShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="ClavePrimariaShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="AtributoRelacion" />
-        <ParentElementPath>
-          <DomainPath>TapizHasAtributoRelacion.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="AtributoRelacionShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="AtributoRelacionShape" />
+        <ImageShapeMoniker Name="FormaEntidad" />
       </ShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="Relacion" />
         <ParentElementPath>
           <DomainPath>TapizHasRelacion.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="RelacionShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Relacion/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="RelacionShape/CardinalidadIzqDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Relacion/CardinalidadIzquierda" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="RelacionShape/CardinalidadDerDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Relacion/CardinalidadDerecha" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="RelacionShape" />
+        <ImageShapeMoniker Name="FormaRelacion" />
       </ShapeMap>
       <ShapeMap HasCustomParentElement="true">
-        <DomainClassMoniker Name="AtributoEntidad" />
+        <DomainClassMoniker Name="ClavePrimaria" />
         <ParentElementPath>
-          <DomainPath>EntidadHasAtributoEntidad.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
+          <DomainPath>EntidadHasClavePrimaria.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
-        <ImageShapeMoniker Name="ImageShape1" />
+        <ImageShapeMoniker Name="FormaClavePrimaria" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoRelacion" />
+        <ParentElementPath>
+          <DomainPath>TapizHasAtributoRelacion.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <ImageShapeMoniker Name="FormaAtributoRelacion" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -621,33 +564,33 @@
       <XmlSerializationBehaviorMoniker Name="DRQPJPFMAMPracticaDSLToolsSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Entidades">
-      <ElementTool Name="Entidad" ToolboxIcon="Resources\FormaEntidad.bmp" Caption="Entidad" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
+      <ElementTool Name="Entidad" ToolboxIcon="Resources\icEntidad.bmp" Caption="Entidad" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
         <Notes>Entidad del MER</Notes>
         <DomainClassMoniker Name="Entidad" />
       </ElementTool>
-      <ElementTool Name="Relacion" ToolboxIcon="Resources\FormaRelacion.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
+      <ElementTool Name="Relacion" ToolboxIcon="Resources\icFormaRelacion.bmp" Caption="Relacion" Tooltip="Relacion" HelpKeyword="Relacion">
         <DomainClassMoniker Name="Relacion" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Relaciones (Conectores)">
-      <ConnectionTool Name="RelacionAtributo" ToolboxIcon="Resources\AtributoRelacion.bmp" Caption="RelacionAtributo" Tooltip="Relacion Atributo" HelpKeyword="RelacionAtributo">
+      <ConnectionTool Name="RelacionAtributo" ToolboxIcon="Resources\icFormaAtributoRelacion.bmp" Caption="RelacionAtributo" Tooltip="Relacion Atributo" HelpKeyword="RelacionAtributo">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionReferencesAtributoRelacionBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="RelacionEntidadIzquierda" ToolboxIcon="Resources\RelacionIzquierda.bmp" Caption="RelacionEntidadIzquierda" Tooltip="Relacion Entidad Izquierda" HelpKeyword="RelacionEntidadIzquierda">
+      <ConnectionTool Name="RelacionEntidadIzquierda" ToolboxIcon="Resources\icRelacionIzquierda.bmp" Caption="RelacionEntidadIzquierda" Tooltip="Relacion Entidad Izquierda" HelpKeyword="RelacionEntidadIzquierda">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionIzquiedaReferencesEntidadDerechaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="RelacionEntidadDerecha" ToolboxIcon="Resources\RelacionDerecha.bmp" Caption="RelacionEntidadDerecha" Tooltip="Relacion Entidad Derecha" HelpKeyword="RelacionEntidadDerecha">
+      <ConnectionTool Name="RelacionEntidadDerecha" ToolboxIcon="Resources\icRelacionDerecha.bmp" Caption="RelacionEntidadDerecha" Tooltip="Relacion Entidad Derecha" HelpKeyword="RelacionEntidadDerecha">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionDerechaReferencesEntidadIzquierdaBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <ToolboxTab TabText="Atributos">
-      <ElementTool Name="ClavePrimaria" ToolboxIcon="Resources\FormaPrimaryKey.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria" HelpKeyword="ClavePrimaria">
+      <ElementTool Name="ClavePrimaria" ToolboxIcon="Resources\icPrimaryKey.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria" HelpKeyword="ClavePrimaria">
         <DomainClassMoniker Name="ClavePrimaria" />
       </ElementTool>
-      <ElementTool Name="AtributoEntidad" ToolboxIcon="Resources\FormaEntidadAtributo.bmp" Caption="AtributoEntidad" Tooltip="Atributo Entidad" HelpKeyword="AtributoEntidad">
+      <ElementTool Name="AtributoEntidad" ToolboxIcon="Resources\icEntidadAtributo.bmp" Caption="AtributoEntidad" Tooltip="Atributo Entidad" HelpKeyword="AtributoEntidad">
         <DomainClassMoniker Name="AtributoEntidad" />
       </ElementTool>
-      <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\FormaAtributoRelacion.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
+      <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\icAtributoRelacion.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
         <DomainClassMoniker Name="AtributoRelacion" />
       </ElementTool>
     </ToolboxTab>

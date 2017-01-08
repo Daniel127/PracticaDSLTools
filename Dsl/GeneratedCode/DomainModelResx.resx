@@ -573,83 +573,71 @@
     <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.TipoAtributo.Float</value>
     <comment>Description for EnumerationLiteral &apos;Float&apos; on DomainEnumeration &apos;TipoAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadShape.Description" xml:space="preserve">
-    <value>Shape used to represent ExampleElements on a Diagram.</value>
-    <comment>Description for DomainClass &apos;EntidadShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo</value>
+    <comment>Description for DomainClass &apos;FormaAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadShape.DisplayName" xml:space="preserve">
-    <value>Entidad Shape</value>
-    <comment>DisplayName for DomainClass &apos;EntidadShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo.DisplayName" xml:space="preserve">
+    <value>Forma Atributo</value>
+    <comment>DisplayName for DomainClass &apos;FormaAtributo&apos;</comment>
   </data>
-  <data name="EntidadShapeNameDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaAtributoNameDecoratorDefaultText" xml:space="preserve">
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape</value>
-    <comment>Description for DomainClass &apos;AtributoEntidadShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad</value>
+    <comment>Description for DomainClass &apos;FormaEntidad&apos;</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape.DisplayName" xml:space="preserve">
-    <value>Atributo Entidad Shape</value>
-    <comment>DisplayName for DomainClass &apos;AtributoEntidadShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad.DisplayName" xml:space="preserve">
+    <value>Forma Entidad</value>
+    <comment>DisplayName for DomainClass &apos;FormaEntidad&apos;</comment>
   </data>
-  <data name="AtributoEntidadShapeNameDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaEntidadNameDecoratorDefaultText" xml:space="preserve">
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape</value>
-    <comment>Description for DomainClass &apos;ClavePrimariaShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion</value>
+    <comment>Description for DomainClass &apos;FormaAtributoRelacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape.DisplayName" xml:space="preserve">
-    <value>Clave Primaria Shape</value>
-    <comment>DisplayName for DomainClass &apos;ClavePrimariaShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Forma Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;FormaAtributoRelacion&apos;</comment>
   </data>
-  <data name="ClavePrimariaShapeNameDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaAtributoRelacionNameDecoratorDefaultText" xml:space="preserve">
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape</value>
-    <comment>Description for DomainClass &apos;AtributoRelacionShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion</value>
+    <comment>Description for DomainClass &apos;FormaRelacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape.DisplayName" xml:space="preserve">
-    <value>Atributo Relacion Shape</value>
-    <comment>DisplayName for DomainClass &apos;AtributoRelacionShape&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.DisplayName" xml:space="preserve">
+    <value>Forma Relacion</value>
+    <comment>DisplayName for DomainClass &apos;FormaRelacion&apos;</comment>
   </data>
-  <data name="AtributoRelacionShapeNameDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaRelacionNameDecoratorDefaultText" xml:space="preserve">
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape</value>
-    <comment>Description for DomainClass &apos;RelacionShape&apos;</comment>
-  </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape.DisplayName" xml:space="preserve">
-    <value>Relacion Shape</value>
-    <comment>DisplayName for DomainClass &apos;RelacionShape&apos;</comment>
-  </data>
-  <data name="RelacionShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="RelacionShapeCardinalidadIzqDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaRelacionCardinalidadIzqDecoratorDefaultText" xml:space="preserve">
     <value>CardinalidadIzqDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="RelacionShapeCardinalidadDerDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaRelacionCardinalidadDerDecoratorDefaultText" xml:space="preserve">
     <value>CardinalidadDerDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1</value>
-    <comment>Description for DomainClass &apos;ImageShape1&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria</value>
+    <comment>Description for DomainClass &apos;FormaClavePrimaria&apos;</comment>
   </data>
-  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1.DisplayName" xml:space="preserve">
-    <value>Image Shape1</value>
-    <comment>DisplayName for DomainClass &apos;ImageShape1&apos;</comment>
+  <data name="UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria.DisplayName" xml:space="preserve">
+    <value>Forma Clave Primaria</value>
+    <comment>DisplayName for DomainClass &apos;FormaClavePrimaria&apos;</comment>
   </data>
-  <data name="ImageShape1NameDecoratorDefaultText" xml:space="preserve">
+  <data name="FormaClavePrimariaNameDecoratorDefaultText" xml:space="preserve">
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
@@ -886,40 +874,56 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ImageShape1Image" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\untitled (3).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>ImageShape1 shape image</comment>
+  <data name="FormaAtributoImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaAtributo1.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>FormaAtributo shape image</comment>
+  </data>
+  <data name="FormaEntidadImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaEntidad1.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>FormaEntidad shape image</comment>
+  </data>
+  <data name="FormaAtributoRelacionImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaAtributoRelacion2.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>FormaAtributoRelacion shape image</comment>
+  </data>
+  <data name="FormaRelacionImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaRelacion.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>FormaRelacion shape image</comment>
+  </data>
+  <data name="FormaClavePrimariaImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\FormaClavePrimaria.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>FormaClavePrimaria shape image</comment>
   </data>
   <data name="EntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaEntidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icEntidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="RelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icFormaRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="RelacionAtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\AtributoRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icFormaAtributoRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="RelacionEntidadIzquierdaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\RelacionIzquierda.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icRelacionIzquierda.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="RelacionEntidadDerechaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\RelacionDerecha.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icRelacionDerecha.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ClavePrimariaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaPrimaryKey.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icPrimaryKey.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AtributoEntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaEntidadAtributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icEntidadAtributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AtributoRelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\FormaAtributoRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icAtributoRelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

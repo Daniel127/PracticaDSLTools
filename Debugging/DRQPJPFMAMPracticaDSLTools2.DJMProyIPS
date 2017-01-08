@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1c760730-d5c4-4d59-96d6-b06662f022cb" xmlns="http://schemas.microsoft.com/dsltools/DRQPJPFMAMPracticaDSLTools">
+  <elements>
+    <entidad Id="789a05e2-e2f5-4d37-be8d-0d13c87e7d72" name="Entidad1">
+      <atributoEntidad>
+        <entidadHasAtributoEntidad Id="450d3c0c-cf68-4a1e-8628-7568e075ee80">
+          <atributoEntidad Id="e95e8b87-f68a-482f-866a-e69c9e8f4614" name="AtributoEntidad1" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="36df30e2-b663-4c51-95e1-5aa6901f517f">
+          <atributoEntidad Id="51771330-3695-48f7-9bf9-84c26d59c4f2" name="AtributoEntidad2" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="95b927a7-8b27-4d1a-9ed4-9bfd044283b9">
+          <atributoEntidad Id="4e6934b3-0738-4aee-ae05-d10344d1d416" name="AtributoEntidad3" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="396d8497-e98f-4da8-a6f5-6752e0aa44e5">
+          <atributoEntidad Id="12573289-64d8-4a1e-9343-dca3f344e0b8" name="AtributoEntidad4" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="773443e5-2131-4fe5-889a-274c4f2d4730">
+          <atributoEntidad Id="6c684678-9860-4a0f-afb1-a670acae67f8" name="AtributoEntidad5" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="8471ca65-45a9-442d-bbc5-417ba5e1561b">
+          <atributoEntidad Id="cf5f6096-eca8-41c1-9beb-6c0bb9524b5b" name="AtributoEntidad6" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="97b87438-9ffa-42b3-8a0f-a33b61692af2">
+          <atributoEntidad Id="134a923d-c931-4d85-9dba-4be99530ae76" name="AtributoEntidad7" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+      </atributoEntidad>
+      <clavePrimaria>
+        <entidadHasClavePrimaria Id="d348f5d7-5528-4ea0-b908-3521e1119016">
+          <clavePrimaria Id="fa7fbb9a-8dea-4a9a-a256-e19a20e0fc54" name="ClavePrimaria1" tipo="String" esNull="false" />
+        </entidadHasClavePrimaria>
+      </clavePrimaria>
+    </entidad>
+    <entidad Id="340476b1-47dc-46e7-8f2d-cb7ca5f5cadd" name="Entidad2">
+      <atributoEntidad>
+        <entidadHasAtributoEntidad Id="7dd3ca2b-b33d-4b2e-aafc-44321e2647a7">
+          <atributoEntidad Id="646f9f30-802e-4599-90d1-c398de59c990" name="AtributoEntidad1" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+        <entidadHasAtributoEntidad Id="4b543c9c-e875-44a1-9c48-e2ef21cc6762">
+          <atributoEntidad Id="3ac03d0f-900f-496a-8702-fed1e368edce" name="AtributoEntidad2" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+      </atributoEntidad>
+      <clavePrimaria>
+        <entidadHasClavePrimaria Id="6916961e-cd6d-4656-852e-95c61582d4ba">
+          <clavePrimaria Id="b5e82b1f-717f-494d-937a-2452222b545a" name="ClavePrimaria1" tipo="String" esNull="false" />
+        </entidadHasClavePrimaria>
+      </clavePrimaria>
+    </entidad>
+  </elements>
+  <relacion>
+    <tapizHasRelacion Id="e950d2d2-3134-4097-b0b0-4c2cd78ffb2f">
+      <relacion Id="c60956a6-d805-44c7-92aa-f3534709507b" name="Relacion1" cardinalidadIzquierda="CeroUno" cardinalidadDerecha="CeroUno">
+        <atributoRelacion>
+          <relacionReferencesAtributoRelacion Id="ebdea781-8598-479d-8ef1-ae7c2d9d4af9">
+            <atributoRelacionMoniker name="/1c760730-d5c4-4d59-96d6-b06662f022cb/AtributoRelacion1" />
+          </relacionReferencesAtributoRelacion>
+          <relacionReferencesAtributoRelacion Id="93f915a8-689d-409a-bd2a-1d837283a72e">
+            <atributoRelacionMoniker name="/1c760730-d5c4-4d59-96d6-b06662f022cb/AtributoRelacion2" />
+          </relacionReferencesAtributoRelacion>
+          <relacionReferencesAtributoRelacion Id="15fc18e1-df91-45c2-8b9b-23861b5b4265">
+            <atributoRelacionMoniker name="/1c760730-d5c4-4d59-96d6-b06662f022cb/AtributoRelacion3" />
+          </relacionReferencesAtributoRelacion>
+        </atributoRelacion>
+        <entidadDerecha>
+          <relacionIzquiedaReferencesEntidadDerecha Id="56884d41-00d0-48d2-98a9-9865b4929d5e">
+            <entidadMoniker name="/1c760730-d5c4-4d59-96d6-b06662f022cb/Entidad1" />
+          </relacionIzquiedaReferencesEntidadDerecha>
+        </entidadDerecha>
+        <entidadIzquieda>
+          <relacionDerechaReferencesEntidadIzquierda Id="99c3c8f2-d3c7-4723-a833-8cab032f2ba3">
+            <entidadMoniker name="/1c760730-d5c4-4d59-96d6-b06662f022cb/Entidad2" />
+          </relacionDerechaReferencesEntidadIzquierda>
+        </entidadIzquieda>
+      </relacion>
+    </tapizHasRelacion>
+  </relacion>
+  <atributoRelacion>
+    <tapizHasAtributoRelacion Id="d4e29f5d-199c-47a7-bd18-92801dea7d2e">
+      <atributoRelacion Id="94733f88-3e61-4fda-a1e4-4b22a56f643d" name="AtributoRelacion1" tipo="String" esNull="false" />
+    </tapizHasAtributoRelacion>
+    <tapizHasAtributoRelacion Id="0b1de1a7-6a7a-45ff-9b8e-d59e1b0a4694">
+      <atributoRelacion Id="facf8502-7252-4abd-a295-b97beaf819dc" name="AtributoRelacion2" tipo="String" esNull="false" />
+    </tapizHasAtributoRelacion>
+    <tapizHasAtributoRelacion Id="1dc858c1-14e0-46e4-8afc-b91b1df324a2">
+      <atributoRelacion Id="843002f4-1239-4659-8411-015d04285ec3" name="AtributoRelacion3" tipo="String" esNull="false" />
+    </tapizHasAtributoRelacion>
+  </atributoRelacion>
+</tapiz>

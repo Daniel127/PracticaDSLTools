@@ -11618,15 +11618,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// Serializer EntidadShapeSerializer for DomainClass EntidadShape.
+	/// Serializer FormaAtributoSerializer for DomainClass FormaAtributo.
 	/// </summary>
-	public partial class EntidadShapeSerializer : DslDiagrams::NodeShapeSerializer
+	public partial class FormaAtributoSerializer : DslDiagrams::ImageShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// EntidadShapeSerializer Constructor
+		/// FormaAtributoSerializer Constructor
 		/// </summary>
-		public EntidadShapeSerializer ()
+		public FormaAtributoSerializer ()
 			: base ()
 		{
 		}
@@ -11652,25 +11652,25 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of EntidadShape.
+		/// This is the XML tag name used to serialize an instance of FormaAtributo.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"entidadShape"; }
+			get { return @"formaAtributo"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of EntidadShape.
+		/// This is the XML tag name used to serialize a monikerized instance of FormaAtributo.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"entidadShapeMoniker"; }
+			get { return @"formaAtributoMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of EntidadShape in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of FormaAtributo in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -11681,16 +11681,16 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one EntidadShape instance from XML.
+		/// Public Read() method that deserializes one FormaAtributo instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the EntidadShape element that is about to be deserialized. 
+		/// of the FormaAtributo element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory EntidadShape instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FormaAtributo instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -11742,8 +11742,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of EntidadShape based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized EntidadShape, a new EntidadShape instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of FormaAtributo based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized FormaAtributo, a new FormaAtributo instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -11753,7 +11753,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created EntidadShape instance, or null if the reader is not pointing to a serialized EntidadShape instance.</returns>
+		/// <returns>Created FormaAtributo instance, or null if the reader is not pointing to a serialized FormaAtributo instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -11773,18 +11773,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "EntidadShape" instance.
+				{	// New "FormaAtributo" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "EntidadShape".
+				{	// Check for derived classes of "FormaAtributo".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						EntidadShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as EntidadShapeSerializer;
+						FormaAtributoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaAtributoSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -11795,8 +11795,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// This method creates an instance of EntidadShape based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of EntidadShape.
+		/// This method creates an instance of FormaAtributo based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of FormaAtributo.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -11804,8 +11804,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new EntidadShape instance should be created.</param>	
-		/// <returns>Created EntidadShape instance.</returns>
+		/// <param name="partition">Partition in which new FormaAtributo instance should be created.</param>	
+		/// <returns>Created FormaAtributo instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -11821,7 +11821,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new EntidadShape(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new FormaAtributo(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -11839,12 +11839,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from EntidadShape, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FormaAtributo, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from EntidadShape.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FormaAtributo.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -11853,7 +11853,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(EntidadShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaAtributo.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -11885,7 +11885,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including EntidadShape itself) instance of EntidadShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including FormaAtributo itself) instance of FormaAtributo based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -11919,18 +11919,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "EntidadShape" moniker instance.
+				{	// New "FormaAtributo" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "EntidadShape".
+				{	// Check for derived classes of "FormaAtributo".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						EntidadShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as EntidadShapeSerializer;
+						FormaAtributoSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaAtributoSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -11941,7 +11941,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of EntidadShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of FormaAtributo based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -11966,7 +11966,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, EntidadShape.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FormaAtributo.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -11990,12 +11990,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from EntidadShape, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaAtributo, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from EntidadShape.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaAtributo.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -12004,7 +12004,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(EntidadShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaAtributo.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -12030,13 +12030,13 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized EntidadShape instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized FormaAtributo instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">EntidadShape instance to be monikerized.</param>
+		/// <param name="element">FormaAtributo instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the EntidadShape instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the EntidadShape instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the FormaAtributo instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FormaAtributo instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -12065,10 +12065,10 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one EntidadShape instance into XML.
+		/// Public Write() method that serializes one FormaAtributo instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">EntidadShape instance to be serialized.</param>
+		/// <param name="element">FormaAtributo instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -12128,11 +12128,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given EntidadShape instance.
+		/// This method calculates a moniker to a given FormaAtributo instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">EntidadShape instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the EntidadShape instance.</returns>
+		/// <param name="element">FormaAtributo instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the FormaAtributo instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -12144,8 +12144,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			EntidadShape instance = element as EntidadShape;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of EntidadShape!");
+			FormaAtributo instance = element as FormaAtributo;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FormaAtributo!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -12156,7 +12156,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">EntidadShape instance to get moniker qualifier from.</param>
+		/// <param name="element">FormaAtributo instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -12181,15 +12181,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// Serializer AtributoEntidadShapeSerializer for DomainClass AtributoEntidadShape.
+	/// Serializer FormaEntidadSerializer for DomainClass FormaEntidad.
 	/// </summary>
-	public partial class AtributoEntidadShapeSerializer : DslDiagrams::NodeShapeSerializer
+	public partial class FormaEntidadSerializer : DslDiagrams::ImageShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// AtributoEntidadShapeSerializer Constructor
+		/// FormaEntidadSerializer Constructor
 		/// </summary>
-		public AtributoEntidadShapeSerializer ()
+		public FormaEntidadSerializer ()
 			: base ()
 		{
 		}
@@ -12215,25 +12215,25 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of AtributoEntidadShape.
+		/// This is the XML tag name used to serialize an instance of FormaEntidad.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"atributoEntidadShape"; }
+			get { return @"formaEntidad"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of AtributoEntidadShape.
+		/// This is the XML tag name used to serialize a monikerized instance of FormaEntidad.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"atributoEntidadShapeMoniker"; }
+			get { return @"formaEntidadMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of AtributoEntidadShape in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of FormaEntidad in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -12244,16 +12244,16 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one AtributoEntidadShape instance from XML.
+		/// Public Read() method that deserializes one FormaEntidad instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the AtributoEntidadShape element that is about to be deserialized. 
+		/// of the FormaEntidad element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory AtributoEntidadShape instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FormaEntidad instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -12305,8 +12305,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of AtributoEntidadShape based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized AtributoEntidadShape, a new AtributoEntidadShape instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of FormaEntidad based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized FormaEntidad, a new FormaEntidad instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -12316,7 +12316,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created AtributoEntidadShape instance, or null if the reader is not pointing to a serialized AtributoEntidadShape instance.</returns>
+		/// <returns>Created FormaEntidad instance, or null if the reader is not pointing to a serialized FormaEntidad instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -12336,18 +12336,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "AtributoEntidadShape" instance.
+				{	// New "FormaEntidad" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "AtributoEntidadShape".
+				{	// Check for derived classes of "FormaEntidad".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						AtributoEntidadShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoEntidadShapeSerializer;
+						FormaEntidadSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaEntidadSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -12358,8 +12358,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// This method creates an instance of AtributoEntidadShape based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of AtributoEntidadShape.
+		/// This method creates an instance of FormaEntidad based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of FormaEntidad.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -12367,8 +12367,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new AtributoEntidadShape instance should be created.</param>	
-		/// <returns>Created AtributoEntidadShape instance.</returns>
+		/// <param name="partition">Partition in which new FormaEntidad instance should be created.</param>	
+		/// <returns>Created FormaEntidad instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -12384,7 +12384,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new AtributoEntidadShape(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new FormaEntidad(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -12402,12 +12402,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from AtributoEntidadShape, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FormaEntidad, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from AtributoEntidadShape.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FormaEntidad.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -12416,7 +12416,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoEntidadShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaEntidad.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -12448,7 +12448,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including AtributoEntidadShape itself) instance of AtributoEntidadShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including FormaEntidad itself) instance of FormaEntidad based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -12482,18 +12482,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "AtributoEntidadShape" moniker instance.
+				{	// New "FormaEntidad" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "AtributoEntidadShape".
+				{	// Check for derived classes of "FormaEntidad".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						AtributoEntidadShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoEntidadShapeSerializer;
+						FormaEntidadSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaEntidadSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -12504,7 +12504,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of AtributoEntidadShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of FormaEntidad based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -12529,7 +12529,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, AtributoEntidadShape.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FormaEntidad.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -12553,12 +12553,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoEntidadShape, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaEntidad, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoEntidadShape.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaEntidad.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -12567,7 +12567,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoEntidadShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaEntidad.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -12593,13 +12593,13 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized AtributoEntidadShape instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized FormaEntidad instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">AtributoEntidadShape instance to be monikerized.</param>
+		/// <param name="element">FormaEntidad instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the AtributoEntidadShape instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the AtributoEntidadShape instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the FormaEntidad instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FormaEntidad instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -12628,10 +12628,10 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one AtributoEntidadShape instance into XML.
+		/// Public Write() method that serializes one FormaEntidad instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">AtributoEntidadShape instance to be serialized.</param>
+		/// <param name="element">FormaEntidad instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -12691,11 +12691,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given AtributoEntidadShape instance.
+		/// This method calculates a moniker to a given FormaEntidad instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">AtributoEntidadShape instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the AtributoEntidadShape instance.</returns>
+		/// <param name="element">FormaEntidad instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the FormaEntidad instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -12707,8 +12707,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			AtributoEntidadShape instance = element as AtributoEntidadShape;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of AtributoEntidadShape!");
+			FormaEntidad instance = element as FormaEntidad;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FormaEntidad!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -12719,7 +12719,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">AtributoEntidadShape instance to get moniker qualifier from.</param>
+		/// <param name="element">FormaEntidad instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -12744,15 +12744,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// Serializer ClavePrimariaShapeSerializer for DomainClass ClavePrimariaShape.
+	/// Serializer FormaAtributoRelacionSerializer for DomainClass FormaAtributoRelacion.
 	/// </summary>
-	public partial class ClavePrimariaShapeSerializer : DslDiagrams::NodeShapeSerializer
+	public partial class FormaAtributoRelacionSerializer : DslDiagrams::ImageShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// ClavePrimariaShapeSerializer Constructor
+		/// FormaAtributoRelacionSerializer Constructor
 		/// </summary>
-		public ClavePrimariaShapeSerializer ()
+		public FormaAtributoRelacionSerializer ()
 			: base ()
 		{
 		}
@@ -12778,25 +12778,25 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of ClavePrimariaShape.
+		/// This is the XML tag name used to serialize an instance of FormaAtributoRelacion.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"clavePrimariaShape"; }
+			get { return @"formaAtributoRelacion"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of ClavePrimariaShape.
+		/// This is the XML tag name used to serialize a monikerized instance of FormaAtributoRelacion.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"clavePrimariaShapeMoniker"; }
+			get { return @"formaAtributoRelacionMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of ClavePrimariaShape in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of FormaAtributoRelacion in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -12807,16 +12807,16 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one ClavePrimariaShape instance from XML.
+		/// Public Read() method that deserializes one FormaAtributoRelacion instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the ClavePrimariaShape element that is about to be deserialized. 
+		/// of the FormaAtributoRelacion element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ClavePrimariaShape instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FormaAtributoRelacion instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -12868,8 +12868,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of ClavePrimariaShape based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized ClavePrimariaShape, a new ClavePrimariaShape instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of FormaAtributoRelacion based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized FormaAtributoRelacion, a new FormaAtributoRelacion instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -12879,7 +12879,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created ClavePrimariaShape instance, or null if the reader is not pointing to a serialized ClavePrimariaShape instance.</returns>
+		/// <returns>Created FormaAtributoRelacion instance, or null if the reader is not pointing to a serialized FormaAtributoRelacion instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -12899,18 +12899,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ClavePrimariaShape" instance.
+				{	// New "FormaAtributoRelacion" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "ClavePrimariaShape".
+				{	// Check for derived classes of "FormaAtributoRelacion".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						ClavePrimariaShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClavePrimariaShapeSerializer;
+						FormaAtributoRelacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaAtributoRelacionSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -12921,8 +12921,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// This method creates an instance of ClavePrimariaShape based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of ClavePrimariaShape.
+		/// This method creates an instance of FormaAtributoRelacion based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of FormaAtributoRelacion.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -12930,8 +12930,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new ClavePrimariaShape instance should be created.</param>	
-		/// <returns>Created ClavePrimariaShape instance.</returns>
+		/// <param name="partition">Partition in which new FormaAtributoRelacion instance should be created.</param>	
+		/// <returns>Created FormaAtributoRelacion instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -12947,7 +12947,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new ClavePrimariaShape(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new FormaAtributoRelacion(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -12965,12 +12965,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ClavePrimariaShape, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FormaAtributoRelacion, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ClavePrimariaShape.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FormaAtributoRelacion.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -12979,7 +12979,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClavePrimariaShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaAtributoRelacion.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -13011,7 +13011,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including ClavePrimariaShape itself) instance of ClavePrimariaShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including FormaAtributoRelacion itself) instance of FormaAtributoRelacion based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -13045,18 +13045,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ClavePrimariaShape" moniker instance.
+				{	// New "FormaAtributoRelacion" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "ClavePrimariaShape".
+				{	// Check for derived classes of "FormaAtributoRelacion".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						ClavePrimariaShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClavePrimariaShapeSerializer;
+						FormaAtributoRelacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaAtributoRelacionSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -13067,7 +13067,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of ClavePrimariaShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of FormaAtributoRelacion based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -13092,7 +13092,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ClavePrimariaShape.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FormaAtributoRelacion.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -13116,12 +13116,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ClavePrimariaShape, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaAtributoRelacion, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ClavePrimariaShape.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaAtributoRelacion.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -13130,7 +13130,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClavePrimariaShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaAtributoRelacion.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -13156,13 +13156,13 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized ClavePrimariaShape instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized FormaAtributoRelacion instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ClavePrimariaShape instance to be monikerized.</param>
+		/// <param name="element">FormaAtributoRelacion instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the ClavePrimariaShape instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ClavePrimariaShape instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the FormaAtributoRelacion instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FormaAtributoRelacion instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -13191,10 +13191,10 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one ClavePrimariaShape instance into XML.
+		/// Public Write() method that serializes one FormaAtributoRelacion instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ClavePrimariaShape instance to be serialized.</param>
+		/// <param name="element">FormaAtributoRelacion instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -13254,11 +13254,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given ClavePrimariaShape instance.
+		/// This method calculates a moniker to a given FormaAtributoRelacion instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ClavePrimariaShape instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the ClavePrimariaShape instance.</returns>
+		/// <param name="element">FormaAtributoRelacion instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the FormaAtributoRelacion instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -13270,8 +13270,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			ClavePrimariaShape instance = element as ClavePrimariaShape;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ClavePrimariaShape!");
+			FormaAtributoRelacion instance = element as FormaAtributoRelacion;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FormaAtributoRelacion!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -13282,7 +13282,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ClavePrimariaShape instance to get moniker qualifier from.</param>
+		/// <param name="element">FormaAtributoRelacion instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -13307,15 +13307,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// Serializer AtributoRelacionShapeSerializer for DomainClass AtributoRelacionShape.
+	/// Serializer FormaRelacionSerializer for DomainClass FormaRelacion.
 	/// </summary>
-	public partial class AtributoRelacionShapeSerializer : DslDiagrams::NodeShapeSerializer
+	public partial class FormaRelacionSerializer : DslDiagrams::ImageShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// AtributoRelacionShapeSerializer Constructor
+		/// FormaRelacionSerializer Constructor
 		/// </summary>
-		public AtributoRelacionShapeSerializer ()
+		public FormaRelacionSerializer ()
 			: base ()
 		{
 		}
@@ -13341,25 +13341,25 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of AtributoRelacionShape.
+		/// This is the XML tag name used to serialize an instance of FormaRelacion.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"atributoRelacionShape"; }
+			get { return @"formaRelacion"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of AtributoRelacionShape.
+		/// This is the XML tag name used to serialize a monikerized instance of FormaRelacion.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"atributoRelacionShapeMoniker"; }
+			get { return @"formaRelacionMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of AtributoRelacionShape in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of FormaRelacion in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -13370,16 +13370,16 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one AtributoRelacionShape instance from XML.
+		/// Public Read() method that deserializes one FormaRelacion instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the AtributoRelacionShape element that is about to be deserialized. 
+		/// of the FormaRelacion element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory AtributoRelacionShape instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FormaRelacion instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -13431,8 +13431,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of AtributoRelacionShape based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized AtributoRelacionShape, a new AtributoRelacionShape instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of FormaRelacion based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized FormaRelacion, a new FormaRelacion instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -13442,7 +13442,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created AtributoRelacionShape instance, or null if the reader is not pointing to a serialized AtributoRelacionShape instance.</returns>
+		/// <returns>Created FormaRelacion instance, or null if the reader is not pointing to a serialized FormaRelacion instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -13462,18 +13462,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "AtributoRelacionShape" instance.
+				{	// New "FormaRelacion" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "AtributoRelacionShape".
+				{	// Check for derived classes of "FormaRelacion".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						AtributoRelacionShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoRelacionShapeSerializer;
+						FormaRelacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaRelacionSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -13484,8 +13484,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// This method creates an instance of AtributoRelacionShape based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of AtributoRelacionShape.
+		/// This method creates an instance of FormaRelacion based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of FormaRelacion.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -13493,8 +13493,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new AtributoRelacionShape instance should be created.</param>	
-		/// <returns>Created AtributoRelacionShape instance.</returns>
+		/// <param name="partition">Partition in which new FormaRelacion instance should be created.</param>	
+		/// <returns>Created FormaRelacion instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -13510,7 +13510,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new AtributoRelacionShape(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new FormaRelacion(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -13528,12 +13528,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from AtributoRelacionShape, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FormaRelacion, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from AtributoRelacionShape.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FormaRelacion.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -13542,7 +13542,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoRelacionShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaRelacion.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -13574,7 +13574,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including AtributoRelacionShape itself) instance of AtributoRelacionShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including FormaRelacion itself) instance of FormaRelacion based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -13608,18 +13608,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "AtributoRelacionShape" moniker instance.
+				{	// New "FormaRelacion" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "AtributoRelacionShape".
+				{	// Check for derived classes of "FormaRelacion".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						AtributoRelacionShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as AtributoRelacionShapeSerializer;
+						FormaRelacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaRelacionSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -13630,7 +13630,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of AtributoRelacionShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of FormaRelacion based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -13655,7 +13655,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, AtributoRelacionShape.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FormaRelacion.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -13679,12 +13679,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoRelacionShape, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaRelacion, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from AtributoRelacionShape.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaRelacion.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -13693,7 +13693,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(AtributoRelacionShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaRelacion.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -13719,13 +13719,13 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized AtributoRelacionShape instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized FormaRelacion instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">AtributoRelacionShape instance to be monikerized.</param>
+		/// <param name="element">FormaRelacion instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the AtributoRelacionShape instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the AtributoRelacionShape instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the FormaRelacion instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FormaRelacion instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -13754,10 +13754,10 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one AtributoRelacionShape instance into XML.
+		/// Public Write() method that serializes one FormaRelacion instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">AtributoRelacionShape instance to be serialized.</param>
+		/// <param name="element">FormaRelacion instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -13817,11 +13817,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given AtributoRelacionShape instance.
+		/// This method calculates a moniker to a given FormaRelacion instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">AtributoRelacionShape instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the AtributoRelacionShape instance.</returns>
+		/// <param name="element">FormaRelacion instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the FormaRelacion instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -13833,8 +13833,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			AtributoRelacionShape instance = element as AtributoRelacionShape;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of AtributoRelacionShape!");
+			FormaRelacion instance = element as FormaRelacion;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FormaRelacion!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -13845,7 +13845,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">AtributoRelacionShape instance to get moniker qualifier from.</param>
+		/// <param name="element">FormaRelacion instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -13870,15 +13870,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// Serializer RelacionShapeSerializer for DomainClass RelacionShape.
+	/// Serializer FormaClavePrimariaSerializer for DomainClass FormaClavePrimaria.
 	/// </summary>
-	public partial class RelacionShapeSerializer : DslDiagrams::NodeShapeSerializer
+	public partial class FormaClavePrimariaSerializer : DslDiagrams::ImageShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// RelacionShapeSerializer Constructor
+		/// FormaClavePrimariaSerializer Constructor
 		/// </summary>
-		public RelacionShapeSerializer ()
+		public FormaClavePrimariaSerializer ()
 			: base ()
 		{
 		}
@@ -13904,25 +13904,25 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of RelacionShape.
+		/// This is the XML tag name used to serialize an instance of FormaClavePrimaria.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"relacionShape"; }
+			get { return @"formaClavePrimaria"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of RelacionShape.
+		/// This is the XML tag name used to serialize a monikerized instance of FormaClavePrimaria.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"relacionShapeMoniker"; }
+			get { return @"formaClavePrimariaMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of RelacionShape in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of FormaClavePrimaria in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -13933,16 +13933,16 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one RelacionShape instance from XML.
+		/// Public Read() method that deserializes one FormaClavePrimaria instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the RelacionShape element that is about to be deserialized. 
+		/// of the FormaClavePrimaria element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory RelacionShape instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FormaClavePrimaria instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -13994,8 +13994,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of RelacionShape based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized RelacionShape, a new RelacionShape instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of FormaClavePrimaria based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized FormaClavePrimaria, a new FormaClavePrimaria instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -14005,7 +14005,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created RelacionShape instance, or null if the reader is not pointing to a serialized RelacionShape instance.</returns>
+		/// <returns>Created FormaClavePrimaria instance, or null if the reader is not pointing to a serialized FormaClavePrimaria instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -14025,18 +14025,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "RelacionShape" instance.
+				{	// New "FormaClavePrimaria" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "RelacionShape".
+				{	// Check for derived classes of "FormaClavePrimaria".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						RelacionShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as RelacionShapeSerializer;
+						FormaClavePrimariaSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaClavePrimariaSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -14047,8 +14047,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// This method creates an instance of RelacionShape based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of RelacionShape.
+		/// This method creates an instance of FormaClavePrimaria based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of FormaClavePrimaria.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -14056,8 +14056,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new RelacionShape instance should be created.</param>	
-		/// <returns>Created RelacionShape instance.</returns>
+		/// <param name="partition">Partition in which new FormaClavePrimaria instance should be created.</param>	
+		/// <returns>Created FormaClavePrimaria instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -14073,7 +14073,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new RelacionShape(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new FormaClavePrimaria(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -14091,12 +14091,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from RelacionShape, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FormaClavePrimaria, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from RelacionShape.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FormaClavePrimaria.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -14105,7 +14105,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(RelacionShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaClavePrimaria.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -14137,7 +14137,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including RelacionShape itself) instance of RelacionShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including FormaClavePrimaria itself) instance of FormaClavePrimaria based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -14171,18 +14171,18 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "RelacionShape" moniker instance.
+				{	// New "FormaClavePrimaria" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "RelacionShape".
+				{	// Check for derived classes of "FormaClavePrimaria".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						RelacionShapeSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as RelacionShapeSerializer;
+						FormaClavePrimariaSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FormaClavePrimariaSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -14193,7 +14193,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of RelacionShape based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of FormaClavePrimaria based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -14218,7 +14218,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, RelacionShape.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FormaClavePrimaria.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -14242,12 +14242,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from RelacionShape, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaClavePrimaria, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from RelacionShape.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FormaClavePrimaria.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -14256,7 +14256,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(RelacionShape.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FormaClavePrimaria.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -14282,13 +14282,13 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized RelacionShape instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized FormaClavePrimaria instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">RelacionShape instance to be monikerized.</param>
+		/// <param name="element">FormaClavePrimaria instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the RelacionShape instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the RelacionShape instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the FormaClavePrimaria instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FormaClavePrimaria instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -14317,10 +14317,10 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one RelacionShape instance into XML.
+		/// Public Write() method that serializes one FormaClavePrimaria instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">RelacionShape instance to be serialized.</param>
+		/// <param name="element">FormaClavePrimaria instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -14380,11 +14380,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given RelacionShape instance.
+		/// This method calculates a moniker to a given FormaClavePrimaria instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">RelacionShape instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the RelacionShape instance.</returns>
+		/// <param name="element">FormaClavePrimaria instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the FormaClavePrimaria instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -14396,8 +14396,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			RelacionShape instance = element as RelacionShape;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of RelacionShape!");
+			FormaClavePrimaria instance = element as FormaClavePrimaria;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FormaClavePrimaria!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -14408,570 +14408,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">RelacionShape instance to get moniker qualifier from.</param>
-		/// <returns>
-		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
-		/// element is not monikerized using standard /qualifier/key mechanism.
-		/// </returns>
-		public override string GetMonikerQualifier(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (directory != null);
-			if (directory == null)
-				throw new global::System.ArgumentNullException ("directory");
-			global::System.Diagnostics.Debug.Assert(element != null);
-			if (element == null)
-				throw new global::System.ArgumentNullException("element");
-			#endregion	
-			
-			return string.Empty;
-		}
-		#endregion
-	}
-}
-
-namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
-{
-	/// <summary>
-	/// Serializer ImageShape1Serializer for DomainClass ImageShape1.
-	/// </summary>
-	public partial class ImageShape1Serializer : DslDiagrams::ImageShapeSerializer
-	{
-		#region Constructor
-		/// <summary>
-		/// ImageShape1Serializer Constructor
-		/// </summary>
-		public ImageShape1Serializer ()
-			: base ()
-		{
-		}
-		#endregion
-	
-		
-		#region Miscellaneous methods
-	
-		/// <summary>
-		/// Reset the serializer
-		/// </summary>
-		/// <remarks>
-		/// Clear the cached information about any derived classes so that it is recalculated.
-		/// </remarks>
-		public override void Reset()
-		{
-			base.Reset();
-			this.derivedClasses = null;
-			this.derivedClassMonikers = null;
-		}
-	
-		#endregion
-	
-		#region Public Properties
-		/// <summary>
-		/// This is the XML tag name used to serialize an instance of ImageShape1.
-		/// </summary>
-		public override string XmlTagName
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"imageShape1"; }
-		}
-	
-		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of ImageShape1.
-		/// </summary>
-		public override string MonikerTagName
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"imageShape1Moniker"; }
-		}
-		
-		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of ImageShape1 in a serialized monikerized instance.
-		/// </summary>
-		public override string MonikerAttributeName
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"Id"; }
-		}
-		#endregion
-	
-		#region Read Methods
-		/// <summary>
-		/// Public Read() method that deserializes one ImageShape1 instance from XML.
-		/// </summary>
-		/// <remarks>
-		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the ImageShape1 element that is about to be deserialized. 
-		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
-		/// or the close tag of the parent element (or EOF).
-		/// </remarks>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ImageShape1 instance that will get the deserialized data.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException ("serializationContext");
-			global::System.Diagnostics.Debug.Assert (element != null);
-			if (element == null)
-				throw new global::System.ArgumentNullException ("element");
-			global::System.Diagnostics.Debug.Assert (reader != null);
-			if (reader == null)
-				throw new global::System.ArgumentNullException ("reader");
-			#endregion
-			
-			// Read properties serialized as XML attributes.
-			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
-	
-			// Read nested XML elements.
-			if (!serializationContext.Result.Failed)
-			{
-				if (!reader.IsEmptyElement)
-				{
-					// Read to the start of the first child element.
-					DslModeling::SerializationUtilities.SkipToFirstChild(reader);
-					
-					// Read any extension element data under this XML element
-					DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.ReadExtensions(serializationContext, element, reader);
-					
-					// Read nested XML elements, they can be either properties serialized as XML elements, or child 
-					// model elements.
-					while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
-					{
-						base.ReadElements(serializationContext, element, reader);
-						if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
-						{
-							// Encountered one unknown XML element, skip it and keep reading.
-							DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.UnexpectedXmlElement(serializationContext, reader);
-							DslModeling::SerializationUtilities.Skip(reader);
-						}
-					}
-				}
-			}
-	
-			// Advance the reader to the next element (open tag of the next sibling, end tag of the parent, or EOF)
-			DslModeling::SerializationUtilities.Skip(reader);
-		}
-		
-	
-		#region TryCreateInstance
-		/// <summary>
-		/// This method creates a correct instance of ImageShape1 based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized ImageShape1, a new ImageShape1 instance will be created in the given partition, otherwise 
-		/// null is returned.
-		/// </summary>
-		/// <remarks>
-		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
-		/// not move the reader; the reader should remain at the same position when this method returns.
-		/// </remarks>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created ImageShape1 instance, or null if the reader is not pointing to a serialized ImageShape1 instance.</returns>
-		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException ("serializationContext");
-			global::System.Diagnostics.Debug.Assert (reader != null);
-			if (reader == null)
-				throw new global::System.ArgumentNullException ("reader");
-			global::System.Diagnostics.Debug.Assert (partition != null);
-			if (partition == null)
-				throw new global::System.ArgumentNullException ("partition");
-			#endregion
-	
-			DslModeling::ModelElement result = null;
-			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
-			{
-				string localName = reader.LocalName;
-				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ImageShape1" instance.
-					result = this.CreateInstance(serializationContext, reader, partition);
-				}
-				else
-				{	// Check for derived classes of "ImageShape1".
-					if (this.derivedClasses == null)
-						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
-					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
-					DslModeling::DomainClassInfo derivedClass = null;
-					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
-					{	// New derived class instance.
-						ImageShape1Serializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ImageShape1Serializer;
-						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
-						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
-					}
-				}
-			}
-	
-			return result;
-		}
-	
-		/// <summary>
-		/// This method creates an instance of ImageShape1 based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of ImageShape1.
-		/// </summary>
-		/// <remarks>
-		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
-		/// not move the reader; the reader should remain at the same position when this method returns.
-		/// </remarks>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new ImageShape1 instance should be created.</param>	
-		/// <returns>Created ImageShape1 instance.</returns>
-		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
-		{
-			string idStr = reader.GetAttribute ("Id");
-			try
-			{
-				global::System.Guid id;
-				if (string.IsNullOrEmpty(idStr))
-				{	// Create a default Id.
-					id = global::System.Guid.NewGuid();
-					DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.MissingId(serializationContext, reader, id);
-				}
-				else
-				{
-					id = new global::System.Guid (idStr);
-				}
-				return new ImageShape1(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
-			}
-			catch (global::System.ArgumentNullException /* anEx */)
-			{	
-				DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
-			}
-			catch (global::System.FormatException /* fEx */)
-			{
-				DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
-			}
-			catch (global::System.OverflowException /* ofEx */)
-			{
-				DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
-			}
-			return null;
-		}
-	
-		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ImageShape1, created on demand.
-		/// </summary>
-		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
-	
-		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ImageShape1.
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
-		private void ConstructDerivedClassesLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
-		{
-			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
-			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
-	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ImageShape1.DomainClassId);
-			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
-	
-			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
-			if (descendents != null)
-			{
-				foreach (DslModeling::DomainClassInfo descendent in descendents)
-				{
-					global::System.Type descendentType = descendent.ImplementationClass;
-					if (!descendentType.IsAbstract)
-					{
-						DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
-						if (descendentSerializer != null)
-						{
-							string descendentXmlTagName = descendentSerializer.XmlTagName;
-							if (!string.IsNullOrEmpty (descendentXmlTagName))
-							{
-								global::System.Diagnostics.Debug.Assert(!this.derivedClasses.ContainsKey (descendentXmlTagName));
-								this.derivedClasses.Add (descendentXmlTagName, descendent);
-							}
-						}
-					}
-					else
-					{   // Ignore abstract derived classes because they cannot be instantiated directly.
-					}
-				}
-			}
-		}
-		#endregion
-	
-		#region TryCreateMonikerInstance
-		/// <summary>
-		/// This method creates a Moniker of the correct derived (including ImageShape1 itself) instance of ImageShape1 based on the tag currently pointed by the reader.
-		/// </summary>
-		/// <remarks>
-		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
-		/// not move the reader; the reader should remain at the same position when this method returns.
-		/// </remarks>		
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
-		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
-		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
-		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
-		public override DslModeling::Moniker TryCreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException ("serializationContext");
-			global::System.Diagnostics.Debug.Assert (reader != null);
-			if (reader == null)
-				throw new global::System.ArgumentNullException ("reader");
-			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
-			if (sourceRolePlayer == null)
-				throw new global::System.ArgumentNullException ("sourceRolePlayer");
-			global::System.Diagnostics.Debug.Assert (partition != null);
-			if (partition == null)
-				throw new global::System.ArgumentNullException ("partition");
-			#endregion
-	
-			DslModeling::Moniker result = null;
-			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
-			{
-				string localName = reader.LocalName;
-				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ImageShape1" moniker instance.
-					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
-				}
-				else
-				{	// Check for derived classes of "ImageShape1".
-					if (this.derivedClassMonikers == null)
-						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
-					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
-					DslModeling::DomainClassInfo derivedClass = null;
-					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
-					{	// New derived class moniker instance.
-						ImageShape1Serializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ImageShape1Serializer;
-						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
-						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
-					}
-				}
-			}
-	
-			return result;
-		}
-		
-		/// <summary>
-		/// This method creates a Moniker of ImageShape1 based on the tag currently pointed by the reader.
-		/// </summary>
-		/// <remarks>
-		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
-		/// not move the reader; the reader should remain at the same position when this method returns.
-		/// </remarks>		
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
-		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
-		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
-		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
-		protected override DslModeling::Moniker CreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
-		{
-			string monikerString = DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.ReadAttribute(serializationContext, sourceRolePlayer, reader, this.MonikerAttributeName);
-	
-			if (string.IsNullOrEmpty(monikerString))
-			{	
-				DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.MissingMoniker(serializationContext, reader, this.MonikerAttributeName);
-				return null;
-			}
-			try
-			{	// Normalize the Id.
-				global::System.Guid id = new global::System.Guid(monikerString);
-				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ImageShape1.DomainClassId, partition.Store), partition.Store);
-				// Set location info if possible.
-				result.Location = serializationContext.Location;
-				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
-				if (xmlLineInfo != null)
-				{
-					result.Line = xmlLineInfo.LineNumber;
-					result.Column = xmlLineInfo.LinePosition;
-				}
-				return result;
-			}
-			catch (global::System.FormatException /* fEx */)
-			{
-				DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
-				return null;
-			}
-			catch (global::System.OverflowException /* oEx */)
-			{	
-				DRQPJPFMAMPracticaDSLToolsSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
-				return null;
-			}
-		}
-	
-		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ImageShape1, created on demand.
-		/// </summary>
-		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
-	
-		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ImageShape1.
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
-		private void ConstructDerivedClassMonikersLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
-		{
-			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
-			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
-	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ImageShape1.DomainClassId);
-			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
-	
-			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
-			if (descendents != null)
-			{
-				foreach (DslModeling::DomainClassInfo descendent in descendents)
-				{
-					DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
-					if (descendentSerializer != null)
-					{
-						string descendentMonikerTagName = descendentSerializer.MonikerTagName;
-						if (!string.IsNullOrEmpty (descendentMonikerTagName))
-						{
-							global::System.Diagnostics.Debug.Assert(!this.derivedClassMonikers.ContainsKey (descendentMonikerTagName));
-							this.derivedClassMonikers.Add (descendentMonikerTagName, descendent);
-						}
-					}
-				}
-			}
-		}
-		#endregion
-		#endregion
-	
-		#region Write Methods
-		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized ImageShape1 instance into XML.
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ImageShape1 instance to be monikerized.</param>
-		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the ImageShape1 instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ImageShape1 instance being monikerized.</param>
-		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException ("serializationContext");
-			global::System.Diagnostics.Debug.Assert (element != null);
-			if (element == null)
-				throw new global::System.ArgumentNullException ("element");
-			global::System.Diagnostics.Debug.Assert (writer != null);
-			if (writer == null)
-				throw new global::System.ArgumentNullException ("writer");
-			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
-			if (sourceRolePlayer == null)
-				throw new global::System.ArgumentNullException ("sourceRolePlayer");
-			global::System.Diagnostics.Debug.Assert (relSerializer != null);
-			if (relSerializer == null)
-				throw new global::System.ArgumentNullException ("relSerializer");
-			#endregion
-			
-			string monikerString = this.CalculateQualifiedName(serializationContext.Directory, element);
-			global::System.Diagnostics.Debug.Assert(!string.IsNullOrEmpty(monikerString));
-			writer.WriteStartElement(this.MonikerTagName);
-			DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, this.MonikerAttributeName, monikerString);
-			writer.WriteEndElement();
-		}
-		
-		/// <summary>
-		/// Public Write() method that serializes one ImageShape1 instance into XML.
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ImageShape1 instance to be serialized.</param>
-		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="rootElementSettings">
-		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
-		/// information like schema target namespace, version, etc.
-		/// This should only be passed for root-level elements. Null should be passed for rest elements (and ideally call the Write() method 
-		/// without this parameter).
-		/// </param>
-		public override void Write(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::RootElementSettings rootElementSettings)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException ("serializationContext");
-			global::System.Diagnostics.Debug.Assert (element != null);
-			if (element == null)
-				throw new global::System.ArgumentNullException ("element");
-			global::System.Diagnostics.Debug.Assert (writer != null);
-			if (writer == null)
-				throw new global::System.ArgumentNullException ("writer");
-			#endregion
-	
-			// Write start of element, including schema target namespace if specified.
-			if (rootElementSettings != null && !string.IsNullOrEmpty(rootElementSettings.SchemaTargetNamespace))
-			{
-				writer.WriteStartElement(this.XmlTagName, rootElementSettings.SchemaTargetNamespace);
-				DslModeling::SerializationUtilities.WriteDomainModelNamespaces(serializationContext.Directory, writer, rootElementSettings.SchemaTargetNamespace);
-			}
-			else
-			{
-				writer.WriteStartElement(this.XmlTagName);
-			}
-				
-			// Write version info (in the format 1.2.3.4), if necessary
-			if (rootElementSettings != null && rootElementSettings.Version != null)
-				writer.WriteAttributeString("dslVersion", rootElementSettings.Version.ToString(4));
-	
-			// Write out element Id.
-			writer.WriteAttributeString("Id", element.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture));
-	
-			base.WritePropertiesAsAttributes(serializationContext, element, writer);
-	
-			// Write out any extension data if this is the root element
-			if (rootElementSettings != null && !serializationContext.Result.Failed)
-			{
-				DRQPJPFMAMPracticaDSLToolsSerializationHelper.Instance.WriteExtensions(serializationContext, element, writer);
-			}
-	
-			if (!serializationContext.Result.Failed)
-			{
-				// Write 1) properties serialized as nested XML elements and 2) child model elements into XML.
-				base.WriteElements(serializationContext, element, writer);
-			}
-	
-			writer.WriteEndElement();
-		}
-		#endregion
-	
-		#region Moniker Support
-		/// <summary>
-		/// This method calculates a moniker to a given ImageShape1 instance.
-		/// </summary>
-		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ImageShape1 instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the ImageShape1 instance.</returns>
-		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert (directory != null);
-			if (directory == null)
-				throw new global::System.ArgumentNullException ("directory");
-			global::System.Diagnostics.Debug.Assert(element != null);
-			if (element == null)
-				throw new global::System.ArgumentNullException("element");
-			#endregion	
-			
-			ImageShape1 instance = element as ImageShape1;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ImageShape1!");
-	
-			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-		}
-	
-		/// <summary>
-		/// A domain class can be monikerized in different ways: standard /qualifier/key mechanism, custom moniker, or element ID. If the domain class is serialized
-		/// using standard /qualifier/key mechanism, this method returns the qualifier of the moniker; if the domain class uses other ways for monikerization, this method
-		/// returns empty string.
-		/// </summary>
-		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ImageShape1 instance to get moniker qualifier from.</param>
+		/// <param name="element">FormaClavePrimaria instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -16744,7 +16181,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{
 					global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> customSerializerTypes = this.CustomSerializerTypes;
 					int customSerializerCount = (customSerializerTypes == null ? 0 : customSerializerTypes.Count);
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(24 + customSerializerCount);
+					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(23 + customSerializerCount);
 	
 					#region Serializers defined in this model
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Tapiz.DomainClassId, typeof(TapizSerializer)));
@@ -16762,12 +16199,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionReferencesAtributoRelacion.DomainClassId, typeof(RelacionReferencesAtributoRelacionSerializer)));
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionIzquiedaReferencesEntidadDerecha.DomainClassId, typeof(RelacionIzquiedaReferencesEntidadDerechaSerializer)));
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionDerechaReferencesEntidadIzquierda.DomainClassId, typeof(RelacionDerechaReferencesEntidadIzquierdaSerializer)));
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(EntidadShape.DomainClassId, typeof(EntidadShapeSerializer)));
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(AtributoEntidadShape.DomainClassId, typeof(AtributoEntidadShapeSerializer)));
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClavePrimariaShape.DomainClassId, typeof(ClavePrimariaShapeSerializer)));
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(AtributoRelacionShape.DomainClassId, typeof(AtributoRelacionShapeSerializer)));
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionShape.DomainClassId, typeof(RelacionShapeSerializer)));
-					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ImageShape1.DomainClassId, typeof(ImageShape1Serializer)));
+					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FormaAtributo.DomainClassId, typeof(FormaAtributoSerializer)));
+					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FormaEntidad.DomainClassId, typeof(FormaEntidadSerializer)));
+					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FormaAtributoRelacion.DomainClassId, typeof(FormaAtributoRelacionSerializer)));
+					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FormaRelacion.DomainClassId, typeof(FormaRelacionSerializer)));
+					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FormaClavePrimaria.DomainClassId, typeof(FormaClavePrimariaSerializer)));
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionAtributoConnector.DomainClassId, typeof(RelacionAtributoConnectorSerializer)));
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionEntidadConnector.DomainClassId, typeof(RelacionEntidadConnectorSerializer)));
 					DRQPJPFMAMPracticaDSLToolsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(DRQPJPFMAMPracticaDSLToolsDiagram.DomainClassId, typeof(DRQPJPFMAMPracticaDSLToolsDiagramSerializer)));
