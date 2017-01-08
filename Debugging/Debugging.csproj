@@ -45,6 +45,10 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="DRQPJPFMAMPracticaDSLTools2.DJMProyIPS" />
+    <None Include="DRQPJPFMAMPracticaDSLTools2.DJMProyIPS.diagram">
+      <DependentUpon>DRQPJPFMAMPracticaDSLTools2.DJMProyIPS</DependentUpon>
+    </None>
     <None Include="Sample.DJMProyIPS">
       <SubType>Designer</SubType>
     </None>
