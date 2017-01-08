@@ -264,6 +264,166 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
+			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion.DecoratorsInitialized += FormaAtributoRelacionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo.DecoratorsInitialized += FormaAtributoDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad.DecoratorsInitialized += FormaEntidadDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.DecoratorsInitialized += FormaRelacionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria.DecoratorsInitialized += FormaClavePrimariaDecoratorMap.OnDecoratorsInitialized;
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for FormaAtributoRelacion.
+		/// </summary>
+		internal static partial class FormaAtributoRelacionDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for FormaAtributoRelacion.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for FormaAtributo.
+		/// </summary>
+		internal static partial class FormaAtributoDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for FormaAtributo.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for FormaEntidad.
+		/// </summary>
+		internal static partial class FormaEntidadDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for FormaEntidad.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for FormaRelacion.
+		/// </summary>
+		internal static partial class FormaRelacionDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for FormaRelacion.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.CardinalidadIzquierdaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalidadIzqDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.CardinalidadDerechaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalidadDerDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for FormaClavePrimaria.
+		/// </summary>
+		internal static partial class FormaClavePrimariaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for FormaClavePrimaria.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Atributo.NameDomainPropertyId);
+				propertyInfo.PresentationDomainNavigator = new DslDiagrams::PresentationDomainNavigator(NameDecoratorPresentationToDomain);
+				propertyInfo.DomainPresentationNavigator = new DslDiagrams::DomainPresentationNavigator(NameDecoratorDomainToPresentation);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+			public static DslModeling::ModelElement NameDecoratorPresentationToDomain(DslDiagrams::PresentationElement presentation)
+			{
+				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria modelElement = presentation.ModelElement as global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria;
+				if(modelElement != null)
+				{
+					// Segments 0 and 1
+					global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad modelElement2 = modelElement.Entidad;
+					if ( modelElement2 == null ) return null;
+					// Segments 2 and 3
+					global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria mappedElement = modelElement2.ClavePrimaria;
+					if ( mappedElement == null ) return null;
+					return mappedElement;
+				}
+				return null;
+			}
+			public static global::System.Collections.Generic.ICollection<DslDiagrams::PresentationElement> NameDecoratorDomainToPresentation(DslModeling::ModelElement modelElement)
+			{
+				global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria typedElement = modelElement as global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria;
+				if(typedElement != null)
+				{
+					if(typedElement.IsDeleted)
+					{
+						// We cannot navigate back along a path containing deleted elements, best we can do is return the diagram
+						// to ensure all visible shapes are invalidated.
+						global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDiagram> diagramCollection = modelElement.Store.ElementDirectory.FindElements<global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDiagram>(true);
+						global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDiagram[] diagramArray = new global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDiagram[diagramCollection.Count];
+						diagramCollection.CopyTo(diagramArray, 0);
+						return diagramArray;
+					}
+					// Segments 3 and 2
+					global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad typedElement1 = typedElement.Entidad;
+					if ( typedElement1 == null ) return null;
+					// Segments 1 and 0
+					global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimaria mappedElements = typedElement1.ClavePrimaria;
+					if ( mappedElements == null ) return null;
+					return DslDiagrams::PresentationViewsSubject.GetPresentation(mappedElements);
+				}
+				return null;
+			}
 		}
 		
 		#endregion
@@ -619,6 +779,46 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			}
 		}
 		
+	
+		/// <summary>
+		/// A rule which fires when data mapped to outer text decorators has changed,
+		/// so we can update the decorator host's bounds.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion), InitiallyDisabled=true)]
+		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+				
+				if (e.DomainProperty.Id == global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad.NameDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad.FindFormaEntidadDecorator("NameDecorator");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Entidad.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.CardinalidadIzquierdaDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.FindFormaRelacionDecorator("CardinalidadIzqDecorator");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.CardinalidadDerechaDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.FindFormaRelacionDecorator("CardinalidadDerDecorator");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.Relacion.DomainClassId);
+					}
+				}
+			}
+		}
 	
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change

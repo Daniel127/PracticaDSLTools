@@ -294,13 +294,13 @@
       </ShapeHasDecorators>
     </ImageShape>
     <ImageShape Id="7b4c5830-c7d8-4db7-b6de-64546c8383dc" Description="Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion" Name="FormaRelacion" DisplayName="Forma Relacion" Namespace="UPM_IPS.DRQPJPFMAMPracticaDSLTools" FixedTooltipText="Forma Relacion" InitialHeight="1" Image="Resources\FormaRelacion.png">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="OuterMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="OuterMiddleLeft" HorizontalOffset="0" VerticalOffset="0" isMoveable="true">
         <TextDecorator Name="CardinalidadIzqDecorator" DisplayName="Cardinalidad Izq Decorator" DefaultText="CardinalidadIzqDecorator" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="OuterMiddleRight" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="OuterMiddleRight" HorizontalOffset="0" VerticalOffset="0" isMoveable="true">
         <TextDecorator Name="CardinalidadDerDecorator" DisplayName="Cardinalidad Der Decorator" DefaultText="CardinalidadDerDecorator" />
       </ShapeHasDecorators>
     </ImageShape>
@@ -510,6 +510,22 @@
         <ParentElementPath>
           <DomainPath>EntidadHasAtributoEntidad.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributoRelacion/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributo/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="FormaAtributo" />
       </ShapeMap>
       <ShapeMap>
@@ -517,6 +533,22 @@
         <ParentElementPath>
           <DomainPath>TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaEntidad/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Entidad/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributo/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Entidad/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="FormaEntidad" />
       </ShapeMap>
       <ShapeMap>
@@ -524,6 +556,38 @@
         <ParentElementPath>
           <DomainPath>TapizHasRelacion.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributoRelacion/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Relacion/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaRelacion/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Relacion/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaRelacion/CardinalidadIzqDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Relacion/CardinalidadIzquierda" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaRelacion/CardinalidadDerDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Relacion/CardinalidadDerecha" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="FormaRelacion" />
       </ShapeMap>
       <ShapeMap HasCustomParentElement="true">
@@ -531,6 +595,31 @@
         <ParentElementPath>
           <DomainPath>EntidadHasClavePrimaria.Entidad/!Entidad/TapizHasEntidades.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributoRelacion/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaClavePrimaria/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+              <DomainPath>EntidadHasClavePrimaria.Entidad/!Entidad/.ClavePrimaria/!ClavePrimaria</DomainPath>
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributo/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="FormaClavePrimaria" />
       </ShapeMap>
       <ShapeMap>
@@ -538,6 +627,22 @@
         <ParentElementPath>
           <DomainPath>TapizHasAtributoRelacion.Tapiz/!Tapiz</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributoRelacion/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="FormaAtributo/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="FormaAtributoRelacion" />
       </ShapeMap>
     </ShapeMaps>

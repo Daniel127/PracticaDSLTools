@@ -91,6 +91,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				typeof(FormaRelacion),
 				typeof(FormaClavePrimaria),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram),
+				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged),
 			};
 		}
@@ -372,6 +373,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged));
 			ruleManager.EnableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged));
 		}
 		
@@ -384,6 +386,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged));
 			ruleManager.DisableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged));
 		}
 		#endregion
