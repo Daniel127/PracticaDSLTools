@@ -42,14 +42,14 @@
       <relacionMoniker Id="3658a110-8b0b-4a84-b2c3-fe58f657637a" />
       <relativeChildShapes />
     </formaRelacion>
-    <relacionEntidadConnector Id="6aa219df-ad3e-4130-add4-906570714615" edgePoints="[(7.25 : 2.8125); (9 : 2.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <relacionEntidadConnector Id="6aa219df-ad3e-4130-add4-906570714615" edgePoints="[(7.25 : 3.006640625); (9 : 3.006640625)]" fixedFrom="Caller" fixedTo="Algorithm">
       <relacionIzquiedaReferencesEntidadDerechaMoniker Id="bbd85212-22e8-4380-a73d-779fba04cbda" />
       <nodes>
         <formaRelacionMoniker Id="e28dae07-8e4d-4ed3-ac28-52d5a616d315" />
         <formaEntidadMoniker Id="21182732-f207-4da5-8a2f-213435c55166" />
       </nodes>
     </relacionEntidadConnector>
-    <relacionEntidadConnector Id="471b8fee-5098-474a-a76b-effbe2787611" edgePoints="[(5.5 : 2.8125); (4.375 : 2.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <relacionEntidadConnector Id="471b8fee-5098-474a-a76b-effbe2787611" edgePoints="[(5.5 : 3.015390625); (4.375 : 3.015390625)]" fixedFrom="Caller" fixedTo="Algorithm">
       <relacionDerechaReferencesEntidadIzquierdaMoniker Id="bdd3b597-f1d4-4fed-9216-b403390e4235" />
       <nodes>
         <formaRelacionMoniker Id="e28dae07-8e4d-4ed3-ac28-52d5a616d315" />
@@ -78,7 +78,7 @@
         <formaEntidadMoniker Id="49173936-335f-410b-bc32-4afd162c0de6" />
       </nodes>
     </relacionEntidadConnector>
-    <relacionEntidadConnector Id="7a8cf1ef-3fa2-4c8a-8d38-8329df5d7514" edgePoints="[(9 : 5.9375); (8.625 : 5.9375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <relacionEntidadConnector Id="7a8cf1ef-3fa2-4c8a-8d38-8329df5d7514" edgePoints="[(9 : 6.073671875); (8.625 : 6.073671875)]" fixedFrom="Caller" fixedTo="Algorithm">
       <relacionDerechaReferencesEntidadIzquierdaMoniker Id="721300e5-02bf-4249-a5f6-36a7b59ec743" />
       <nodes>
         <formaRelacionMoniker Id="9291c1a6-1a90-4775-827b-2b5f7bd6718d" />

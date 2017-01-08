@@ -1,9 +1,11 @@
+
 	
 	<html>
 
 		<head>
 		<title>
 			Persona
+
 		</title>
 
 		</head>
@@ -29,7 +31,8 @@
 			Tarjeta : <input name="Tarjeta" type="text" value="">
 			<br>
 			<br>
-					<input type="submit" value="Alta" />
+	
+				<input type="submit" value="Alta" />
 
 			</form>
 
@@ -44,6 +47,7 @@
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
 		$Tarjeta = $_GET['Tarjeta'];
+
 	$resultado = mysql_query("INSERT INTO Alumno VALUES(
 	'$Tarjeta')");
 				

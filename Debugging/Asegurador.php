@@ -1,9 +1,11 @@
+
 	
 	<html>
 
 		<head>
 		<title>
 			Asegurador
+
 		</title>
 
 		</head>
@@ -29,11 +31,12 @@
 			TipoSeguro : <input name="TipoSeguro" type="text" value="">
 			<br>
 			<br>
-			Matricula : <input name="Matricula" type="text" value="">
+	 : <input name="Matricula" type="text" value="">
 										<br>
 										<br>
 
-					<input type="submit" value="Alta" />
+	
+				<input type="submit" value="Alta" />
 
 			</form>
 
@@ -48,6 +51,7 @@
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
 		$TipoSeguro = $_GET['TipoSeguro'];
+
 	$resultado = mysql_query("INSERT INTO Alumno VALUES(
 	'$TipoSeguro')");
 				
@@ -62,4 +66,5 @@
 		</center>
 		</body>
 	</html>
+
 

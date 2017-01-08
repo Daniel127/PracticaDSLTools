@@ -1,9 +1,11 @@
+
 	
 	<html>
 
 		<head>
 		<title>
 			Tiene
+
 		</title>
 
 		</head>
@@ -26,7 +28,8 @@
 			<br>
 			<br>
 
-					<input type="submit" value="Alta" />
+	
+				<input type="submit" value="Alta" />
 
 			</form>
 
@@ -40,7 +43,8 @@
     
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
-		$resultado = mysql_query("INSERT INTO Alumno VALUES(
+	
+	$resultado = mysql_query("INSERT INTO Alumno VALUES(
 	'$Matricula','$DNI',");
 				
 				if ($resultado){

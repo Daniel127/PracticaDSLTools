@@ -21,9 +21,7 @@ CREATE TABLE IF NOT EXISTS Asegurador
 (
 	Nombre CHAR(20) NOT NULL,
 	TipoSeguro CHAR(20) NOT NULL,
-Matricula CHAR(20) NOT NULL,
-	FOREIGN KEY (Matricula) REFERENCES Coche (Matricula),
-		PRIMARY KEY(Nombre)
+	PRIMARY KEY(Nombre)
 );
 	
 CREATE TABLE IF NOT EXISTS Tiene
@@ -39,6 +37,5 @@ CREATE TABLE IF NOT EXISTS Contrata
 	FOREIGN KEY (Nombre) REFERENCES Asegurador (Nombre),
 	DNI CHAR(20),
 	FOREIGN KEY (DNI) REFERENCES Persona (DNI)
-);
 );
 

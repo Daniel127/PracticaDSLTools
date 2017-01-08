@@ -1,9 +1,11 @@
+
 	
 	<html>
 
 		<head>
 		<title>
 			Coche
+
 		</title>
 
 		</head>
@@ -32,7 +34,8 @@
 			Nombre : <input name="Nombre" type="text" value="">
 										<br>
 										<br>
-					<input type="submit" value="Alta" />
+	
+				<input type="submit" value="Alta" />
 
 			</form>
 
@@ -47,6 +50,7 @@
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
 		$Modelo = $_GET['Modelo'];
+
 	$resultado = mysql_query("INSERT INTO Alumno VALUES(
 	'$Modelo')");
 				

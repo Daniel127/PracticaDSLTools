@@ -68,7 +68,7 @@
       </relacion>
     </tapizHasRelacion>
     <tapizHasRelacion Id="2fda5792-1992-46b0-b36b-0208abfcc6ef">
-      <relacion Id="e7d356b0-f7e7-4db3-a55e-a946504febd0" name="Tiene" cardinalidadIzquierda="UnoUno" cardinalidadDerecha="UnoUno">
+      <relacion Id="e7d356b0-f7e7-4db3-a55e-a946504febd0" name="Tiene" cardinalidadIzquierda="UnoUno" cardinalidadDerecha="CeroN">
         <entidadDerecha>
           <relacionIzquiedaReferencesEntidadDerecha Id="19d13fe2-8f77-4783-a5bb-db7061829030">
             <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Coche" />

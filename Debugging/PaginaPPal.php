@@ -1,6 +1,9 @@
 ﻿
 
 
+
+
+
 <html>
 <head>
     <title>
@@ -12,24 +15,31 @@
 	<h1>Pagina Principal</h1>
     <br>
     <br>
-	    <a href="Persona.php"><b>Persona</b> </a> 
+	
+    <a href="Persona.php"><b>Persona</b> </a> 
     <br>
     <br>
-        <a href="Coche.php"><b>Coche</b> </a> 
+    
+    <a href="Coche.php"><b>Coche</b> </a> 
     <br>
     <br>
-        <a href="Asegurador.php"><b>Asegurador</b> </a> 
+    
+    <a href="Asegurador.php"><b>Asegurador</b> </a> 
     <br>
     <br>
-    		<a href="Tiene.php"><b>Tiene</b> </a> 
+    
+		<a href="Tiene.php"><b>Tiene</b> </a> 
 		<br>
 		<br>
-				<a href="Contrata.php"><b>Contrata</b> </a> 
+		
+		<a href="Contrata.php"><b>Contrata</b> </a> 
 		<br>
 		<br>
-		    </center>
+		
+    </center>
 </body>
 </html>
+
 
 
 

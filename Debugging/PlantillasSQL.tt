@@ -76,10 +76,10 @@ CREATE TABLE IF NOT EXISTS <# WriteLine(relacion.Name); #>
 	#>
 	FOREIGN KEY (<#= relacion.EntidadIzquieda.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadIzquieda.Name#> (<#=relacion.EntidadIzquieda.ClavePrimaria.Name#>)
 <#
-		}
 #>
 );
 <#
+		}
 	}
 #>
 
