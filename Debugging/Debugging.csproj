@@ -60,8 +60,22 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Alumno.html">
+      <DependentUpon>Plantillaphp.tt</DependentUpon>
+    </Content>
+    <Content Include="Asignatura.html">
+      <DependentUpon>Plantillaphp.tt</DependentUpon>
+    </Content>
     <Content Include="Clase.txt">
       <DependentUpon>PlantillasSQL.tt</DependentUpon>
+    </Content>
+    <Content Include="Matricula.html">
+      <DependentUpon>Plantillaphp.tt</DependentUpon>
+    </Content>
+    <Content Include="Plantillaphp.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plantillaphp.tt</DependentUpon>
     </Content>
     <Content Include="PlantillasSQL.sql">
       <AutoGen>True</AutoGen>
@@ -74,6 +88,10 @@
     </Content>
     <Content Include="Prueba.txt">
       <DependentUpon>PlantillasSQL.tt</DependentUpon>
+    </Content>
+    <Content Include="Plantillaphp.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Plantillaphp.html</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

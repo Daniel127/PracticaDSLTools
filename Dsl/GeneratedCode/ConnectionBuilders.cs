@@ -642,7 +642,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionIzquiedaReferencesEntidadDerechaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder RelacionDerechaReferencesEntidadIzquierdaBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -668,11 +668,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{				
 					if(targetShapeElement == null)
 					{
-						return RelacionIzquiedaReferencesEntidadDerechaBuilder.CanAcceptSource(sourceElement);
+						return RelacionDerechaReferencesEntidadIzquierdaBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return RelacionIzquiedaReferencesEntidadDerechaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return RelacionDerechaReferencesEntidadIzquierdaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -697,7 +697,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionIzquiedaReferencesEntidadDerechaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder RelacionDerechaReferencesEntidadIzquierdaBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -711,7 +711,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				RelacionIzquiedaReferencesEntidadDerechaBuilder.Connect(sourceElement, targetElement);
+				RelacionDerechaReferencesEntidadIzquierdaBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
@@ -801,7 +801,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDerechaReferencesEntidadIzquierdaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder RelacionIzquiedaReferencesEntidadDerechaBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -827,11 +827,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				{				
 					if(targetShapeElement == null)
 					{
-						return RelacionDerechaReferencesEntidadIzquierdaBuilder.CanAcceptSource(sourceElement);
+						return RelacionIzquiedaReferencesEntidadDerechaBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return RelacionDerechaReferencesEntidadIzquierdaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return RelacionIzquiedaReferencesEntidadDerechaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -856,7 +856,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDerechaReferencesEntidadIzquierdaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder RelacionIzquiedaReferencesEntidadDerechaBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -870,7 +870,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				RelacionDerechaReferencesEntidadIzquierdaBuilder.Connect(sourceElement, targetElement);
+				RelacionIzquiedaReferencesEntidadDerechaBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		

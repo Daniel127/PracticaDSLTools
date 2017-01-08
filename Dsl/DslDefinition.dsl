@@ -576,11 +576,11 @@
       <ConnectionTool Name="RelacionAtributo" ToolboxIcon="Resources\icFormaAtributoRelacion.bmp" Caption="RelacionAtributo" Tooltip="Relacion Atributo" HelpKeyword="RelacionAtributo">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionReferencesAtributoRelacionBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="RelacionEntidadIzquierda" ToolboxIcon="Resources\icRelacionIzquierda.bmp" Caption="RelacionEntidadIzquierda" Tooltip="Relacion Entidad Izquierda" HelpKeyword="RelacionEntidadIzquierda">
-        <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionIzquiedaReferencesEntidadDerechaBuilder" />
-      </ConnectionTool>
-      <ConnectionTool Name="RelacionEntidadDerecha" ToolboxIcon="Resources\icRelacionDerecha.bmp" Caption="RelacionEntidadDerecha" Tooltip="Relacion Entidad Derecha" HelpKeyword="RelacionEntidadDerecha">
+      <ConnectionTool Name="RelacionEntidadIzquierda" ToolboxIcon="Resources\RelacionIzquierda.bmp" Caption="RelacionEntidadIzquierda" Tooltip="Relacion Entidad Izquierda" HelpKeyword="RelacionEntidadIzquierda">
         <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionDerechaReferencesEntidadIzquierdaBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="RelacionEntidadDerecha" ToolboxIcon="Resources\RelacionDerecha.bmp" Caption="RelacionEntidadDerecha" Tooltip="Relacion Entidad Derecha" HelpKeyword="RelacionEntidadDerecha">
+        <ConnectionBuilderMoniker Name="DRQPJPFMAMPracticaDSLTools/RelacionIzquiedaReferencesEntidadDerechaBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <ToolboxTab TabText="Atributos">
