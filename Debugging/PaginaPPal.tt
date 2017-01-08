@@ -1,0 +1,296 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True" #>
+<#@ output extension=".php" #>
+<#@ DRQPJPFMAMPracticaDSLTools processor="DRQPJPFMAMPracticaDSLToolsDirectiveProcessor" requires="fileName='Sample.DJMProyIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+
+<html>
+<head>
+    <title>
+     Pagina Principal
+    </title>
+</head>
+<body bgcolor="#B8D1F1">
+    <center>
+	<h1>Pagina Principal</h1>
+    <br>
+    <br>
+	<#
+	foreach(Entidad entidad in this.Tapiz.Elements)
+	{
+	#>
+    <a href="<#  Write(entidad.Name); #>.php"><b><# Write(entidad.Name); #></b> </a> 
+    <br>
+    <br>
+    <#
+	}
+	foreach(Relacion relacion in this.Tapiz.Relacion)
+	{
+		if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+			(relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN))
+		{
+		#>
+		<a href="<#  Write(relacion.Name); #>.php"><b><# Write(relacion.Name); #></b> </a> 
+		<br>
+		<br>
+		<#
+		}
+	}
+	#>
+    </center>
+</body>
+</html>
+
+
+
+<#
+
+	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+
+	foreach(Entidad entidad in this.Tapiz.Elements)
+	{
+	fileManager.StartNewFile(entidad.Name + ".php");
+#>
+	
+	<html>
+
+		<head>
+		<title>
+			<# WriteLine(entidad.Name); #>
+		</title>
+
+		</head>
+
+		<body bgcolor="#B8D1F1">
+			<center>
+	
+			 <?php
+
+				 if (!(isset($_GET['<#  Write(entidad.ClavePrimaria.Name); #>']))){
+	
+			 ?>
+
+			<form>
+        
+				<h1><# Write(entidad.Name); #></h1>
+				
+	<#Write("\t\t" + entidad.ClavePrimaria.Name);#> : <input name="<# Write( entidad.ClavePrimaria.Name); #>" type="text" value="">
+			<br>
+			<br>
+
+
+	<#
+				
+	
+				int atrib=0;
+				foreach(Atributo atributo in entidad.AtributoEntidad)
+				{
+					Write("\t\t" + atributo.Name);
+					atrib++;
+	
+	#> : <input name="<# Write( atributo.Name); #>" type="text" value="">
+			<br>
+			<br>
+	<#
+	foreach(Relacion relacion in this.Tapiz.Relacion)
+	{
+		if(relacion.EntidadDerecha.Name == entidad.Name || relacion.EntidadIzquieda.Name == entidad.Name)
+			if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
+					relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+					(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
+					relacion.CardinalidadDerecha == Cardinalidad.CeroN)))
+					{
+
+						if(relacion.EntidadIzquieda.Name == entidad.Name)
+						{
+							if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) ||
+								((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+										
+										Write("\t\t" + relacion.EntidadDerecha.ClavePrimaria.Name);
+	#> : <input name="<# Write( relacion.EntidadDerecha.ClavePrimaria.Name); #>" type="text" value="">
+										<br>
+										<br>
+
+	<#					
+						}
+
+
+						else
+						{
+							if( (relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN) ||
+								((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+	
+								Write("\t\t" + relacion.EntidadIzquieda.ClavePrimaria.Name);
+	#> : <input name="<# Write( relacion.EntidadIzquieda.ClavePrimaria.Name); #>" type="text" value="">
+										<br>
+										<br>
+	<#
+						}
+					 }					
+		}
+					}
+	#>
+				<input type="submit" value="Alta" />
+
+			</form>
+
+			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+
+			<?php
+				}
+				else{
+					$conex = @mysql_connect("localhost","root") or die("ERROR...");
+
+    
+					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
+
+	<#
+					foreach(Atributo atributo in entidad.AtributoEntidad)
+					{
+						WriteLine("\t$" + atributo.Name + " = $_GET['"+ atributo.Name + "'];");
+					}
+	#>
+	$resultado = mysql_query("INSERT INTO Alumno VALUES(
+	<#
+					int recorrido=0;
+					foreach(Atributo atributo in entidad.AtributoEntidad)
+					{
+						if(recorrido!=(atrib-1))
+							Write( "'$"+ atributo.Name + "'," );
+						else
+							Write( "'$"+ atributo.Name + "')" );
+						recorrido++;
+					}
+	#>");
+				
+				if ($resultado){
+					echo" Datos Insertados ";
+				}
+				else
+					echo"Error en la inserción";
+				mysql_close();
+			}
+		?>
+		</center>
+		</body>
+	</html>
+<#
+	}
+
+#>
+
+<#
+
+
+	foreach(Relacion relacion in this.Tapiz.Relacion)
+	{
+		if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+			(relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN))
+		{
+
+	fileManager.StartNewFile(relacion.Name + ".php");
+#>
+	
+	<html>
+
+		<head>
+		<title>
+			<# WriteLine(relacion.Name); #>
+		</title>
+
+		</head>
+
+		<body bgcolor="#B8D1F1">
+			<center>
+	
+			 <?php
+
+				 if (!(isset($_GET['<#  Write(relacion.EntidadDerecha.ClavePrimaria.Name); #>']))){
+	
+			 ?>
+
+			<form>
+        
+				<h1><# Write(relacion.Name); #></h1>
+				
+	<#Write("\t\t" + relacion.EntidadDerecha.ClavePrimaria.Name);#> : <input name="var<# Write(relacion.EntidadDerecha.ClavePrimaria.Name); #>" type="text" value="">
+	<#Write("\t\t" + relacion.EntidadIzquieda.ClavePrimaria.Name);#> : <input name="var<# Write(relacion.EntidadIzquieda.ClavePrimaria.Name); #>" type="text" value="">
+			<br>
+			<br>
+
+	<#
+				
+	
+				int atrib=0;
+				foreach(Atributo atributo in relacion.AtributoRelacion)
+				{
+					Write("\t\t" + atributo.Name);
+					atrib++;
+	
+	#> : <input name="var<# Write( atributo.Name); #>" type="text" value="">
+			<br>
+			<br>
+	<#
+				}
+	#>
+				<input type="submit" value="Alta" />
+
+			</form>
+
+			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+
+			<?php
+				}
+				else{
+					$conex = @mysql_connect("localhost","root") or die("ERROR...");
+
+    
+					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
+
+	<#
+					foreach(Atributo atributo in relacion.AtributoRelacion)
+					{
+						WriteLine("\t$" + atributo.Name + " = $_GET['var"+ atributo.Name + "'];");
+					}
+	#>
+	$resultado = mysql_query("INSERT INTO Alumno VALUES(
+	<#
+			Write("'$" + relacion.EntidadDerecha.ClavePrimaria.Name+"',");
+			Write("'$" + relacion.EntidadIzquieda.ClavePrimaria.Name+"'");
+			if (atrib==0)
+				Write(",");
+					int recorrido=0;
+					foreach(Atributo atributo in relacion.AtributoRelacion)
+				{
+						if(recorrido!=(atrib-1))
+							Write( "'$"+ atributo.Name + "'," );
+						else
+							Write( "'$"+ atributo.Name + "')" );
+						recorrido++;
+					}
+	#>");
+				
+				if ($resultado){
+					echo" Datos Insertados ";
+				}
+				else
+					echo"Error en la inserción";
+				mysql_close();
+			}
+		?>
+		</center>
+		</body>
+	</html>
+<#
+		}
+	}
+
+
+
+
+
+
+
+
+fileManager.Process();
+#>
