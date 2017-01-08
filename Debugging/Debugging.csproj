@@ -45,9 +45,26 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Asegurador.php">
+      <DependentUpon>PaginaPPal.tt</DependentUpon>
+    </None>
+    <None Include="Coche.php">
+      <DependentUpon>PaginaPPal.tt</DependentUpon>
+    </None>
+    <None Include="Contrata.php">
+      <DependentUpon>PaginaPPal.tt</DependentUpon>
+    </None>
     <None Include="DRQPJPFMAMPracticaDSLTools2.DJMProyIPS" />
     <None Include="DRQPJPFMAMPracticaDSLTools2.DJMProyIPS.diagram">
       <DependentUpon>DRQPJPFMAMPracticaDSLTools2.DJMProyIPS</DependentUpon>
+    </None>
+    <None Include="PaginaPPal.php">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaginaPPal.tt</DependentUpon>
+    </None>
+    <None Include="Persona.php">
+      <DependentUpon>PaginaPPal.tt</DependentUpon>
     </None>
     <None Include="Sample.DJMProyIPS">
       <SubType>Designer</SubType>
@@ -55,27 +72,16 @@
     <None Include="Sample.DJMProyIPS.diagram">
       <DependentUpon>Sample.DJMProyIPS</DependentUpon>
     </None>
+    <None Include="Tiene.php">
+      <DependentUpon>PaginaPPal.tt</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Alumno.html">
-      <DependentUpon>Plantillaphp.tt</DependentUpon>
-    </Content>
-    <Content Include="Asignatura.html">
-      <DependentUpon>Plantillaphp.tt</DependentUpon>
-    </Content>
     <Content Include="Clase.txt">
       <DependentUpon>PlantillasSQL.tt</DependentUpon>
-    </Content>
-    <Content Include="Matricula.html">
-      <DependentUpon>Plantillaphp.tt</DependentUpon>
-    </Content>
-    <Content Include="Plantillaphp.html">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Plantillaphp.tt</DependentUpon>
     </Content>
     <Content Include="PlantillasSQL.sql">
       <AutoGen>True</AutoGen>
@@ -89,9 +95,9 @@
     <Content Include="Prueba.txt">
       <DependentUpon>PlantillasSQL.tt</DependentUpon>
     </Content>
-    <Content Include="Plantillaphp.tt">
+    <Content Include="PaginaPPal.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Plantillaphp.html</LastGenOutput>
+      <LastGenOutput>PaginaPPal.php</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -740,7 +740,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("CardinalidadIzqDecorator");
@@ -750,7 +750,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
 			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.OuterMiddleLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.OuterMiddleLeft, DslDiagrams::PointD.Empty, true);
 			decorators.Add(decorator2);
 				
 			DslDiagrams::TextField field3 = new DslDiagrams::TextField("CardinalidadDerDecorator");
@@ -760,7 +760,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			field3.AnchoringBehavior.MinimumHeightInLines = 1;
 			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator3 = new DslDiagrams::ShapeDecorator(field3, DslDiagrams::ShapeDecoratorPosition.OuterMiddleRight, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ShapeDecorator(field3, DslDiagrams::ShapeDecoratorPosition.OuterMiddleRight, DslDiagrams::PointD.Empty, true);
 			decorators.Add(decorator3);
 				
 		}

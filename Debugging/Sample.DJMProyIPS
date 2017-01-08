@@ -1,48 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7f3450ee-c6be-4359-9a7f-0583589c4eb4" xmlns="http://schemas.microsoft.com/dsltools/DRQPJPFMAMPracticaDSLTools">
   <elements>
-    <entidad Id="55058ccd-ff77-4b74-b19d-e86664036230" name="Cliente">
-      <atributoEntidad>
-        <entidadHasAtributoEntidad Id="f8cbdbe4-8742-49b4-a64d-6d6752aafb39">
-          <atributoEntidad Id="a8275239-cd56-457c-a00d-da5c0baa99cb" name="Atributo1" tipo="Char" esNull="false" />
-        </entidadHasAtributoEntidad>
-        <entidadHasAtributoEntidad Id="f3a14d44-4642-4b47-8ed1-1619550d1ad1">
-          <atributoEntidad Id="9dcc8be9-3285-41c3-babd-b74780a4f8de" name="AtributoEntidad1" tipo="String" esNull="false" />
-        </entidadHasAtributoEntidad>
-        <entidadHasAtributoEntidad Id="01b15878-1e5c-4a92-94fc-7bcdc470a74a">
-          <atributoEntidad Id="c37530aa-ae0c-4da1-af2f-6e3c9e56d0e1" name="AtributoEntidad2" tipo="String" esNull="false" />
-        </entidadHasAtributoEntidad>
-      </atributoEntidad>
-      <clavePrimaria>
-        <entidadHasClavePrimaria Id="b147ea41-a85e-4610-831e-c0425bdf0030">
-          <clavePrimaria Id="c32bd16c-e987-4a42-a8cb-02b21701240d" name="ClavePrimaria1" tipo="Integer" esNull="false" />
-        </entidadHasClavePrimaria>
-      </clavePrimaria>
-    </entidad>
-    <entidad Id="ca2d090c-01f1-47f5-b403-eabdb2783916" name="Pedido">
+    <entidad Id="ca2d090c-01f1-47f5-b403-eabdb2783916" name="Persona">
       <atributoEntidad>
         <entidadHasAtributoEntidad Id="acbcdb41-7c4c-4d91-9b0e-ec4ffc485a7b">
-          <atributoEntidad Id="5d54146a-f7de-42db-b91f-f1a8227427c2" name="AtributoEntidad1" tipo="String" esNull="false" />
+          <atributoEntidad Id="5d54146a-f7de-42db-b91f-f1a8227427c2" name="Tarjeta" tipo="String" esNull="false" />
         </entidadHasAtributoEntidad>
       </atributoEntidad>
       <clavePrimaria>
         <entidadHasClavePrimaria Id="c219056d-ad52-447f-9af0-e91648667602">
-          <clavePrimaria Id="9e03356f-f2d9-4a4a-a23e-b81140d3e8fa" name="Codigo" tipo="String" esNull="false" />
+          <clavePrimaria Id="9e03356f-f2d9-4a4a-a23e-b81140d3e8fa" name="DNI" tipo="String" esNull="false" />
+        </entidadHasClavePrimaria>
+      </clavePrimaria>
+    </entidad>
+    <entidad Id="d65daeb9-0d1f-4a2d-b769-1bf27a0ac46e" name="Coche">
+      <atributoEntidad>
+        <entidadHasAtributoEntidad Id="8e3ec69a-6056-488e-a1af-dfe6571234c4">
+          <atributoEntidad Id="4a6b15b1-0046-4962-8cf7-ca06571f4a99" name="Modelo" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+      </atributoEntidad>
+      <clavePrimaria>
+        <entidadHasClavePrimaria Id="0991d651-de03-45e0-afde-a24a66cd2c59">
+          <clavePrimaria Id="5941389e-55b8-4a4a-b568-92a80249375f" name="Matricula" tipo="String" esNull="false" />
+        </entidadHasClavePrimaria>
+      </clavePrimaria>
+    </entidad>
+    <entidad Id="b5dc44bd-080e-4447-8050-14034982b43e" name="Asegurador">
+      <atributoEntidad>
+        <entidadHasAtributoEntidad Id="c37ac90d-1b72-4966-91d2-5316a0284f8e">
+          <atributoEntidad Id="0b736f5e-ea4c-40e1-a2fb-3f2f6b4dd54c" name="TipoSeguro" tipo="String" esNull="false" />
+        </entidadHasAtributoEntidad>
+      </atributoEntidad>
+      <clavePrimaria>
+        <entidadHasClavePrimaria Id="df60941d-e712-4478-958b-cd8bc060916b">
+          <clavePrimaria Id="59286ccc-6b97-41d2-bec2-916b05020b05" name="Nombre" tipo="String" esNull="false" />
         </entidadHasClavePrimaria>
       </clavePrimaria>
     </entidad>
   </elements>
   <relacion>
-    <tapizHasRelacion Id="f42f1593-2cf7-4ca5-b504-a480f67cfbf9">
-      <relacion Id="b0f55704-9cf0-46bd-b48e-079dfc5b2604" name="Relacion1" cardinalidadIzquierda="CeroN" cardinalidadDerecha="CeroN">
+    <tapizHasRelacion Id="8e12baa9-6129-4055-afed-07aaa8d2d3c2">
+      <relacion Id="3658a110-8b0b-4a84-b2c3-fe58f657637a" name="Tiene" cardinalidadIzquierda="CeroN" cardinalidadDerecha="CeroN">
         <entidadDerecha>
-          <relacionIzquiedaReferencesEntidadDerecha Id="ea0a95a5-5917-4f99-a4d8-2515b4ff7389">
-            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Pedido" />
+          <relacionIzquiedaReferencesEntidadDerecha Id="bbd85212-22e8-4380-a73d-779fba04cbda">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Coche" />
           </relacionIzquiedaReferencesEntidadDerecha>
         </entidadDerecha>
         <entidadIzquieda>
-          <relacionDerechaReferencesEntidadIzquierda Id="eaf7bda1-39ec-4593-8da8-890d45215d62">
-            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Cliente" />
+          <relacionDerechaReferencesEntidadIzquierda Id="bdd3b597-f1d4-4fed-9216-b403390e4235">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Persona" />
+          </relacionDerechaReferencesEntidadIzquierda>
+        </entidadIzquieda>
+      </relacion>
+    </tapizHasRelacion>
+    <tapizHasRelacion Id="2650284f-5385-4853-822c-1494aad3d72c">
+      <relacion Id="592fa620-edaf-44e1-8f6c-c8da5fa9bab5" name="Contrata" cardinalidadIzquierda="CeroN" cardinalidadDerecha="UnoN">
+        <entidadDerecha>
+          <relacionIzquiedaReferencesEntidadDerecha Id="a0ee95e8-43ae-4652-92f1-e3351fccfb94">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Asegurador" />
+          </relacionIzquiedaReferencesEntidadDerecha>
+        </entidadDerecha>
+        <entidadIzquieda>
+          <relacionDerechaReferencesEntidadIzquierda Id="1a2a52a1-5841-4610-98d8-0105e2ba2f2f">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Persona" />
+          </relacionDerechaReferencesEntidadIzquierda>
+        </entidadIzquieda>
+      </relacion>
+    </tapizHasRelacion>
+    <tapizHasRelacion Id="2fda5792-1992-46b0-b36b-0208abfcc6ef">
+      <relacion Id="e7d356b0-f7e7-4db3-a55e-a946504febd0" name="Tiene" cardinalidadIzquierda="UnoUno" cardinalidadDerecha="UnoUno">
+        <entidadDerecha>
+          <relacionIzquiedaReferencesEntidadDerecha Id="19d13fe2-8f77-4783-a5bb-db7061829030">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Coche" />
+          </relacionIzquiedaReferencesEntidadDerecha>
+        </entidadDerecha>
+        <entidadIzquieda>
+          <relacionDerechaReferencesEntidadIzquierda Id="721300e5-02bf-4249-a5f6-36a7b59ec743">
+            <entidadMoniker name="/7f3450ee-c6be-4359-9a7f-0583589c4eb4/Asegurador" />
           </relacionDerechaReferencesEntidadIzquierda>
         </entidadIzquieda>
       </relacion>
