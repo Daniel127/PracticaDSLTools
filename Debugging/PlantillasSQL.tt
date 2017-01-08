@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS <# WriteLine(entidad.Name); #>
 			WriteLine("\t" + atributo.Name + " " + GenerarTipo(atributo.Tipo) + (atributo.EsNull ? "," : " NOT NULL,"));
 		}
 		if(entidad.RelacionDerecha.Count > 0){
-			int i = 1;
 			foreach(Relacion relacion in entidad.RelacionDerecha){
 				if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
 					relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
@@ -29,13 +28,11 @@ CREATE TABLE IF NOT EXISTS <# WriteLine(entidad.Name); #>
 				{
 					WriteLine(relacion.EntidadDerecha.ClavePrimaria.Name + " " + GenerarTipo(relacion.EntidadDerecha.ClavePrimaria.Tipo) + ((relacion.CardinalidadDerecha == Cardinalidad.CeroN || relacion.CardinalidadDerecha == Cardinalidad.CeroUno) ? "," : " NOT NULL,"));
 	#>
-	FOREIGN KEY (<#= relacion.EntidadDerecha.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadDerecha.Name#> (<#=relacion.EntidadDerecha.ClavePrimaria.Name#>)<#= i == entidad.RelacionDerecha.Count? "":","#>
+	FOREIGN KEY (<#= relacion.EntidadDerecha.ClavePrimaria.Name #>) REFERENCES <#=relacion.EntidadDerecha.Name#> (<#=relacion.EntidadDerecha.ClavePrimaria.Name#>),
 	<#			}
-				i++;
 			}
 		}
 		if(entidad.RelacionIzquierda.Count > 0){
-			int i = 1;
 			foreach(Relacion relacion in entidad.RelacionIzquierda){
 				if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
 					relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
@@ -50,7 +47,6 @@ CREATE TABLE IF NOT EXISTS <# WriteLine(entidad.Name); #>
 <#
 				}
 			}
-			i++;
 		}
 	#>
 	PRIMARY KEY(<#=entidad.ClavePrimaria.Name #>)
