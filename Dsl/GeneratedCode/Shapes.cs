@@ -14,15 +14,15 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// DomainClass EntidadShape
-	/// Shape used to represent ExampleElements on a Diagram.
+	/// DomainClass FormaAtributo
+	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadShape.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.EntidadShape.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributo.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("dd4edf64-49e3-4b4e-b653-0d85102e6b77")]
-	public partial class EntidadShape : DslDiagrams::NodeShape
+	[DslModeling::DomainObjectId("7dca74e6-e383-4fd9-a058-0ea7872fed27")]
+	public partial class FormaAtributo : DslDiagrams::ImageShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -87,9 +87,9 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with EntidadShape.
+		/// Finds a decorator associated with FormaAtributo.
 		/// </summary>
-		public static DslDiagrams::Decorator FindEntidadShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindFormaAtributoDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -115,60 +115,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		#endregion
 		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(2, 0.75);
-			}
-		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Outline pen settings for this shape.
-			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
-			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 113, 111, 110);
-			outlinePen.Width = 0.01F;
-			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
-			// Fill brush settings for this shape.
-			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 242, 239, 229);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
-		
-		}
-		
-		/// <summary>
-		/// Indicates whether this shape displays a background gradient.
-		/// </summary>
-		public override bool HasBackgroundGradient
-		{
-			get
-			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -178,216 +126,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("EntidadShapeNameDecoratorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			shapeFields.Add(field1);
-			
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-		}
-		
-		/// <summary>
-		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
-		/// after the shape has been associated with the model element.
-		/// </summary>
-		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
-		{
-			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
-			
-			if(iteration == 0)
-			{
-				foreach(DslDiagrams::Decorator decorator in this.Decorators)
-				{
-					if(decorator.RequiresHost)
-					{
-						decorator.RepositionHostShape(decorator.GetHostShape(this));
-					}
-				}
-			}
-		}
-		#endregion
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// EntidadShape domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xdd4edf64, 0x49e3, 0x4b4e, 0xb6, 0x53, 0x0d, 0x85, 0x10, 0x2e, 0x6b, 0x77);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EntidadShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EntidadShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-	}
-}
-namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
-{
-	/// <summary>
-	/// DomainClass AtributoEntidadShape
-	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoEntidadShape.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("af5b4b6a-214e-43ca-943e-032263a11cea")]
-	public partial class AtributoEntidadShape : DslDiagrams::NodeShape
-	{
-		#region DiagramElement boilerplate
-		private static DslDiagrams::StyleSet classStyleSet;
-		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
-		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
-		
-		/// <summary>
-		/// Per-class style set for this shape.
-		/// </summary>
-		protected override DslDiagrams::StyleSet ClassStyleSet
-		{
-			get
-			{
-				if (classStyleSet == null)
-				{
-					classStyleSet = CreateClassStyleSet();
-				}
-				return classStyleSet;
-			}
-		}
-		
-		/// <summary>
-		/// Per-class ShapeFields for this shape.
-		/// </summary>
-		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
-		{
-			get
-			{
-				if (shapeFields == null)
-				{
-					shapeFields = CreateShapeFields();
-				}
-				return shapeFields;
-			}
-		}
-		
-		/// <summary>
-		/// Event fired when decorator initialization is complete for this shape type.
-		/// </summary>
-		public static event global::System.EventHandler DecoratorsInitialized;
-		
-		/// <summary>
-		/// List containing decorators used by this type.
-		/// </summary>
-		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
-		{
-			get 
-			{
-				if(decorators == null)
-				{
-					decorators = CreateDecorators();
-					
-					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
-					if(DecoratorsInitialized != null)
-					{
-						DecoratorsInitialized(this, global::System.EventArgs.Empty);
-					}
-				}
-				
-				return decorators; 
-			}
-		}
-		
-		/// <summary>
-		/// Finds a decorator associated with AtributoEntidadShape.
-		/// </summary>
-		public static DslDiagrams::Decorator FindAtributoEntidadShapeDecorator(string decoratorName)
-		{	
-			if(decorators == null) return null;
-			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
-		}
-		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
-		#endregion
-		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(1.5, 1);
-			}
-		}
-		#endregion
-		#region Shape styles
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.Ellipse;
-			}
-		}
-		#endregion
-		#region Decorators
-		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
-		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
-		{
-			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("AtributoEntidadShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaAtributoNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -432,18 +171,29 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			}
 		}
 		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FormaAtributoImage"));
+			}
+		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// AtributoEntidadShape domain class Id.
+		/// FormaAtributo domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xaf5b4b6a, 0x214e, 0x43ca, 0x94, 0x3e, 0x03, 0x22, 0x63, 0xa1, 0x1c, 0xea);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7dca74e6, 0xe383, 0x4fd9, 0xa0, 0x58, 0x0e, 0xa7, 0x87, 0x2f, 0xed, 0x27);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AtributoEntidadShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaAtributo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -453,7 +203,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AtributoEntidadShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaAtributo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -463,15 +213,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// DomainClass ClavePrimariaShape
-	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape
+	/// DomainClass FormaEntidad
+	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.ClavePrimariaShape.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaEntidad.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("1e443832-8cab-491c-b84f-f9a85e71018f")]
-	public partial class ClavePrimariaShape : DslDiagrams::NodeShape
+	[DslModeling::DomainObjectId("ad55c9e0-9f17-46ac-aa0d-61609a557b72")]
+	public partial class FormaEntidad : DslDiagrams::ImageShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -536,9 +286,9 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ClavePrimariaShape.
+		/// Finds a decorator associated with FormaEntidad.
 		/// </summary>
-		public static DslDiagrams::Decorator FindClavePrimariaShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindFormaEntidadDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -564,45 +314,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		#endregion
 		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(1.5, 1);
-			}
-		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Custom font styles
-			DslDiagrams::FontSettings fontSettings;
-			fontSettings = new DslDiagrams::FontSettings();
-			fontSettings.Style =  global::System.Drawing.FontStyle.Bold |  global::System.Drawing.FontStyle.Underline ;
-			fontSettings.Size = 8/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Underline8"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
-		}
-		
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.Ellipse;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -611,16 +324,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("ClavePrimariaShapeNameDecoratorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Underline8");			
-			shapeFields.Add(field1);
-			
 		}
 		
 		/// <summary>
@@ -632,8 +335,14 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
+			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaEntidadNameDecoratorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.OuterBottomCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -658,18 +367,29 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			}
 		}
 		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FormaEntidadImage"));
+			}
+		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ClavePrimariaShape domain class Id.
+		/// FormaEntidad domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1e443832, 0x8cab, 0x491c, 0xb8, 0x4f, 0xf9, 0xa8, 0x5e, 0x71, 0x01, 0x8f);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xad55c9e0, 0x9f17, 0x46ac, 0xaa, 0x0d, 0x61, 0x60, 0x9a, 0x55, 0x7b, 0x72);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ClavePrimariaShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaEntidad(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -679,7 +399,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ClavePrimariaShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaEntidad(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -689,15 +409,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// DomainClass AtributoRelacionShape
-	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape
+	/// DomainClass FormaAtributoRelacion
+	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.AtributoRelacionShape.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaAtributoRelacion.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("dbf5971d-c3e8-4efb-8b90-750c9c72ba76")]
-	public partial class AtributoRelacionShape : DslDiagrams::NodeShape
+	[DslModeling::DomainObjectId("f4c8bb3c-6c7f-4d97-baec-4a5a21ee564e")]
+	public partial class FormaAtributoRelacion : DslDiagrams::ImageShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -762,9 +482,9 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with AtributoRelacionShape.
+		/// Finds a decorator associated with FormaAtributoRelacion.
 		/// </summary>
-		public static DslDiagrams::Decorator FindAtributoRelacionShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindFormaAtributoRelacionDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -790,40 +510,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		#endregion
 		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(1.5, 1);
-			}
-		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Indicates whether this shape displays a background gradient.
-		/// </summary>
-		public override bool HasBackgroundGradient
-		{
-			get
-			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -833,7 +521,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("AtributoRelacionShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaAtributoRelacionNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -878,18 +566,29 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			}
 		}
 		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FormaAtributoRelacionImage"));
+			}
+		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// AtributoRelacionShape domain class Id.
+		/// FormaAtributoRelacion domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xdbf5971d, 0xc3e8, 0x4efb, 0x8b, 0x90, 0x75, 0x0c, 0x9c, 0x72, 0xba, 0x76);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf4c8bb3c, 0x6c7f, 0x4d97, 0xba, 0xec, 0x4a, 0x5a, 0x21, 0xee, 0x56, 0x4e);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AtributoRelacionShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaAtributoRelacion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -899,7 +598,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AtributoRelacionShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaAtributoRelacion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -909,15 +608,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// DomainClass RelacionShape
-	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape
+	/// DomainClass FormaRelacion
+	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.RelacionShape.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaRelacion.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("9562d647-833d-4369-acb7-2dafa497e7fb")]
-	public partial class RelacionShape : DslDiagrams::NodeShape
+	[DslModeling::DomainObjectId("7b4c5830-c7d8-4db7-b6de-64546c8383dc")]
+	public partial class FormaRelacion : DslDiagrams::ImageShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -982,9 +681,9 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with RelacionShape.
+		/// Finds a decorator associated with FormaRelacion.
 		/// </summary>
-		public static DslDiagrams::Decorator FindRelacionShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindFormaRelacionDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -1010,29 +709,8 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		#endregion
 		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(1.5, 1.5);
-			}
-		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.Circle;
-			}
-		}
 		#endregion
 		#region Decorators
 		/// <summary>
@@ -1042,7 +720,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("RelacionShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaRelacionNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1062,11 +740,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("CardinalidadIzqDecorator");
-			field2.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("RelacionShapeCardinalidadIzqDecoratorDefaultText");
+			field2.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaRelacionCardinalidadIzqDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1076,7 +754,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			decorators.Add(decorator2);
 				
 			DslDiagrams::TextField field3 = new DslDiagrams::TextField("CardinalidadDerDecorator");
-			field3.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("RelacionShapeCardinalidadDerDecoratorDefaultText");
+			field3.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaRelacionCardinalidadDerDecoratorDefaultText");
 			field3.DefaultFocusable = true;
 			field3.DefaultAutoSize = true;
 			field3.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1107,18 +785,29 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			}
 		}
 		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FormaRelacionImage"));
+			}
+		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// RelacionShape domain class Id.
+		/// FormaRelacion domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9562d647, 0x833d, 0x4369, 0xac, 0xb7, 0x2d, 0xaf, 0xa4, 0x97, 0xe7, 0xfb);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7b4c5830, 0xc7d8, 0x4db7, 0xb6, 0xde, 0x64, 0x54, 0x6c, 0x83, 0x83, 0xdc);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public RelacionShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaRelacion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -1128,7 +817,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public RelacionShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaRelacion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -1138,15 +827,15 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 {
 	/// <summary>
-	/// DomainClass ImageShape1
-	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1
+	/// DomainClass FormaClavePrimaria
+	/// Description for UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.ImageShape1.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria.DisplayName", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.DRQPJPFMAMPracticaDSLTools.FormaClavePrimaria.Description", typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel), "UPM_IPS.DRQPJPFMAMPracticaDSLTools.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("7dca74e6-e383-4fd9-a058-0ea7872fed27")]
-	public partial class ImageShape1 : DslDiagrams::ImageShape
+	[DslModeling::DomainObjectId("573744de-0ad8-45b8-a3ff-fc5a40f8c7bd")]
+	public partial class FormaClavePrimaria : DslDiagrams::ImageShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1211,9 +900,9 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ImageShape1.
+		/// Finds a decorator associated with FormaClavePrimaria.
 		/// </summary>
-		public static DslDiagrams::Decorator FindImageShape1Decorator(string decoratorName)
+		public static DslDiagrams::Decorator FindFormaClavePrimariaDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -1239,6 +928,17 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		}
 		#endregion
 		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(0.5, 0.8);
+			}
+		}
 		#endregion
 		#region Shape styles
 		#endregion
@@ -1250,7 +950,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("ImageShape1NameDecoratorDefaultText");
+			field1.DefaultText = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager.GetString("FormaClavePrimariaNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1303,21 +1003,21 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			get
 			{
 				global::System.Resources.ResourceManager resourceManager = global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DRQPJPFMAMPracticaDSLToolsDomainModel.SingletonResourceManager;
-				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ImageShape1Image"));
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FormaClavePrimariaImage"));
 			}
 		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ImageShape1 domain class Id.
+		/// FormaClavePrimaria domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7dca74e6, 0xe383, 0x4fd9, 0xa0, 0x58, 0x0e, 0xa7, 0x87, 0x2f, 0xed, 0x27);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x573744de, 0x0ad8, 0x45b8, 0xa3, 0xff, 0xfc, 0x5a, 0x40, 0xf8, 0xc7, 0xbd);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ImageShape1(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaClavePrimaria(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -1327,7 +1027,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ImageShape1(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public FormaClavePrimaria(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

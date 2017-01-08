@@ -85,14 +85,12 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				typeof(DRQPJPFMAMPracticaDSLToolsDiagram),
 				typeof(RelacionAtributoConnector),
 				typeof(RelacionEntidadConnector),
-				typeof(EntidadShape),
-				typeof(AtributoEntidadShape),
-				typeof(ClavePrimariaShape),
-				typeof(AtributoRelacionShape),
-				typeof(RelacionShape),
-				typeof(ImageShape1),
+				typeof(FormaAtributo),
+				typeof(FormaEntidad),
+				typeof(FormaAtributoRelacion),
+				typeof(FormaRelacion),
+				typeof(FormaClavePrimaria),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram),
-				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged),
 			};
 		}
@@ -159,7 +157,7 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(16);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
 				createElementMap.Add(typeof(Tapiz), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(AtributoEntidad), 2);
@@ -169,12 +167,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				createElementMap.Add(typeof(DRQPJPFMAMPracticaDSLToolsDiagram), 6);
 				createElementMap.Add(typeof(RelacionAtributoConnector), 7);
 				createElementMap.Add(typeof(RelacionEntidadConnector), 8);
-				createElementMap.Add(typeof(EntidadShape), 9);
-				createElementMap.Add(typeof(AtributoEntidadShape), 10);
-				createElementMap.Add(typeof(ClavePrimariaShape), 11);
-				createElementMap.Add(typeof(AtributoRelacionShape), 12);
-				createElementMap.Add(typeof(RelacionShape), 13);
-				createElementMap.Add(typeof(ImageShape1), 14);
+				createElementMap.Add(typeof(FormaAtributo), 9);
+				createElementMap.Add(typeof(FormaEntidad), 10);
+				createElementMap.Add(typeof(FormaAtributoRelacion), 11);
+				createElementMap.Add(typeof(FormaRelacion), 12);
+				createElementMap.Add(typeof(FormaClavePrimaria), 13);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -197,12 +194,11 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 				case 6: return new DRQPJPFMAMPracticaDSLToolsDiagram(partition, propertyAssignments);
 				case 7: return new RelacionAtributoConnector(partition, propertyAssignments);
 				case 8: return new RelacionEntidadConnector(partition, propertyAssignments);
-				case 9: return new EntidadShape(partition, propertyAssignments);
-				case 10: return new AtributoEntidadShape(partition, propertyAssignments);
-				case 11: return new ClavePrimariaShape(partition, propertyAssignments);
-				case 12: return new AtributoRelacionShape(partition, propertyAssignments);
-				case 13: return new RelacionShape(partition, propertyAssignments);
-				case 14: return new ImageShape1(partition, propertyAssignments);
+				case 9: return new FormaAtributo(partition, propertyAssignments);
+				case 10: return new FormaEntidad(partition, propertyAssignments);
+				case 11: return new FormaAtributoRelacion(partition, propertyAssignments);
+				case 12: return new FormaRelacion(partition, propertyAssignments);
+				case 13: return new FormaClavePrimaria(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -376,7 +372,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram));
-			ruleManager.EnableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged));
 			ruleManager.EnableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged));
 		}
 		
@@ -389,7 +384,6 @@ namespace UPM_IPS.DRQPJPFMAMPracticaDSLTools
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.FixUpDiagram));
-			ruleManager.DisableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.DecoratorPropertyChanged));
 			ruleManager.DisableRule(typeof(global::UPM_IPS.DRQPJPFMAMPracticaDSLTools.ConnectorRolePlayerChanged));
 		}
 		#endregion

@@ -77,6 +77,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
+    <Compile Include="CodigoAdicional\FormaClavePrimaria.cs" />
+    <Compile Include="CodigoAdicional\FormaRelacion.cs" />
+    <Compile Include="CodigoAdicional\FormaAtributoRelacion.cs" />
+    <Compile Include="CodigoAdicional\FormaEntidad.cs" />
+    <Compile Include="CodigoAdicional\FormaAtributo.cs" />
     <Compile Include="CodigoAdicional\FixUpDiagram.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
