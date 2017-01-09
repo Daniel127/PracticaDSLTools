@@ -1,11 +1,8 @@
-
-	
-	<html>
+		<html>
 
 		<head>
 		<title>
 			Persona
-
 		</title>
 
 		</head>
@@ -15,50 +12,58 @@
 	
 			 <?php
 
-				 if (!(isset($_GET['DNI']))){
+				 if (!(isset($_GET['DNI'])))
+				 {
 	
 			 ?>
 
-			<form>
+					<form>
         
-				<h1>Persona</h1>
+					<h1>Persona</h1>
 				
-			DNI : <input name="DNI" type="text" value="">
-			<br>
-			<br>
+							DNI : <input name="DNI" type="text" value="">
+					<br>
+					<br>
 
 
-			Tarjeta : <input name="Tarjeta" type="text" value="">
-			<br>
-			<br>
-	
-				<input type="submit" value="Alta" />
+		Tarjeta: <input name="Tarjeta" type="text" value="">
+						<br>
+						<br>
+					
+					<input type="submit" value="Alta" />
 
-			</form>
+					</form>
 
-			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+					<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
 
-			<?php
-				}
-				else{
+					
+
+					<?php
+				
+					}//Termina if
+				
+				else
+				{
 					$conex = @mysql_connect("localhost","root") or die("ERROR...");
 
     
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
-		$Tarjeta = $_GET['Tarjeta'];
+	$DNI = $_GET['DNI'];	$Tarjeta = $_GET['Tarjeta'];
 
-	$resultado = mysql_query("INSERT INTO Alumno VALUES(
-	'$Tarjeta')");
-				
-				if ($resultado){
-					echo" Datos Insertados ";
-				}
-				else
-					echo"Error en la inserción";
-				mysql_close();
-			}
-		?>
-		</center>
+					$resultado = mysql_query("INSERT INTO Persona  VALUES( 
+					'$DNI','$Tarjeta')");
+					if ($resultado)
+					{
+						echo" Datos Insertados ";
+					}
+					else
+					{
+						echo"Error en la inserción";
+					}
+					mysql_close();
+			}//Termina el else
+			?>
+			</center>
 		</body>
 	</html>

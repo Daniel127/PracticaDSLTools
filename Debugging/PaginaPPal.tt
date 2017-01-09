@@ -49,10 +49,9 @@
 
 	foreach(Entidad entidad in this.Tapiz.Elements)
 	{
-	fileManager.StartNewFile(entidad.Name + ".php");
+		fileManager.StartNewFile(entidad.Name + ".php");
 #>
-	
-	<html>
+		<html>
 
 		<head>
 		<title>
@@ -66,118 +65,208 @@
 	
 			 <?php
 
-				 if (!(isset($_GET['<#  Write(entidad.ClavePrimaria.Name); #>']))){
+				 if (!(isset($_GET['<#  Write(entidad.ClavePrimaria.Name); #>'])))
+				 {
 	
 			 ?>
 
-			<form>
+					<form>
         
-				<h1><# Write(entidad.Name); #></h1>
+					<h1><# Write(entidad.Name); #></h1>
 				
-	<#Write("\t\t" + entidad.ClavePrimaria.Name);#> : <input name="<# Write( entidad.ClavePrimaria.Name); #>" type="text" value="">
-			<br>
-			<br>
+					<#Write("\t\t" + entidad.ClavePrimaria.Name);#> : <input name="<# Write( entidad.ClavePrimaria.Name); #>" type="text" value="">
+					<br>
+					<br>
 
 
-	<#
+<#
 				
 	
-				int atrib=0;
-				foreach(Atributo atributo in entidad.AtributoEntidad)
-				{
-					Write("\t\t" + atributo.Name);
-					atrib++;
-	
-	#> : <input name="<# Write( atributo.Name); #>" type="text" value="">
-			<br>
-			<br>
-	<#
-	foreach(Relacion relacion in this.Tapiz.Relacion)
-	{
-		if(relacion.EntidadDerecha.Name == entidad.Name || relacion.EntidadIzquieda.Name == entidad.Name)
-			if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
-					relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
-					(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
-					relacion.CardinalidadDerecha == Cardinalidad.CeroN)))
+					int atrib=0;
+					foreach(Atributo atributo in entidad.AtributoEntidad)
 					{
-
-						if(relacion.EntidadIzquieda.Name == entidad.Name)
-						{
-							if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) ||
-								((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
-										
-										Write("\t\t" + relacion.EntidadDerecha.ClavePrimaria.Name);
-	#> : <input name="<# Write( relacion.EntidadDerecha.ClavePrimaria.Name); #>" type="text" value="">
-										<br>
-										<br>
-
-	<#					
-						}
-
-
-						else
-						{
-							if( (relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN) ||
-								((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+						Write("\t\t" + atributo.Name);
+						atrib++;
 	
-								Write("\t\t" + relacion.EntidadIzquieda.ClavePrimaria.Name);
-	#> : <input name="<# Write( relacion.EntidadIzquieda.ClavePrimaria.Name); #>" type="text" value="">
-										<br>
-										<br>
-	<#
-						}
-					 }					
-		}
+						#>: <input name="<# Write( atributo.Name); #>" type="text" value="">
+						<br>
+						<br>
+					
+<#					}
+					foreach(Relacion relacion in this.Tapiz.Relacion)
+					{
+						if(relacion.EntidadDerecha.Name == entidad.Name || relacion.EntidadIzquieda.Name == entidad.Name)
+								if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
+								relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+								(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
+								relacion.CardinalidadDerecha == Cardinalidad.CeroN)))
+								{
+
+									if(relacion.EntidadIzquieda.Name == entidad.Name)
+									{
+										if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) ||
+											((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+										{		
+											Write("\t\t" + relacion.EntidadDerecha.ClavePrimaria.Name);
+											#> : <input name="<# Write( relacion.EntidadDerecha.ClavePrimaria.Name); #>" type="text" value="">
+											<br>
+											<br>
+
+<#										}
+									}
+								
+
+
+									else
+									{
+										if( (relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN) ||
+										((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+										{
+											Write("\t\t" + relacion.EntidadIzquieda.ClavePrimaria.Name);
+											#> : <input name="<# Write( relacion.EntidadIzquieda.ClavePrimaria.Name); #>" type="text" value="">
+											<br>
+											<br>
+<#										}
+									}
+							 }					
+		  
 					}
-	#>
-				<input type="submit" value="Alta" />
+#>
+					<input type="submit" value="Alta" />
 
-			</form>
+					</form>
 
-			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+					<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
 
-			<?php
-				}
-				else{
+					
+
+					<?php
+				
+					}//Termina if
+				
+				else
+				{
 					$conex = @mysql_connect("localhost","root") or die("ERROR...");
 
     
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
-	<#
-					foreach(Atributo atributo in entidad.AtributoEntidad)
+<#
+					Write("\t$" + entidad.ClavePrimaria.Name +" = $_GET['" + entidad.ClavePrimaria.Name  + "'];" );
+					foreach(Atributo atribut in entidad.AtributoEntidad)
 					{
-						WriteLine("\t$" + atributo.Name + " = $_GET['"+ atributo.Name + "'];");
+						WriteLine("\t$" + atribut.Name +" = $_GET['" +   atribut.Name + "'];");
 					}
-	#>
-	$resultado = mysql_query("INSERT INTO Alumno VALUES(
-	<#
-					int recorrido=0;
-					foreach(Atributo atributo in entidad.AtributoEntidad)
+					int cont=0;
+
+					foreach(Relacion relacion in this.Tapiz.Relacion)
 					{
-						if(recorrido!=(atrib-1))
-							Write( "'$"+ atributo.Name + "'," );
+						if(relacion.EntidadDerecha.Name == entidad.Name || relacion.EntidadIzquieda.Name == entidad.Name)
+							if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
+							relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+							(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
+							relacion.CardinalidadDerecha == Cardinalidad.CeroN)))
+							{
+
+								if(relacion.EntidadIzquieda.Name == entidad.Name)
+								{
+									if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) ||
+										((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+									{	
+										WriteLine("\t$" + relacion.EntidadDerecha.ClavePrimaria.Name+" = $_GET['" +   relacion.EntidadDerecha.ClavePrimaria.Name + "'];");
+										cont++;
+									}
+					
+								}
+								else
+								{
+									if( (relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN) ||
+										((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+									{
+										WriteLine("\t$" + relacion.EntidadIzquieda.ClavePrimaria.Name+" = $_GET['" +   relacion.EntidadDerecha.ClavePrimaria.Name + "'];");
+										cont++;
+									}
+								}
+							}	
+					}
+					#>
+
+					$resultado = mysql_query("INSERT INTO <#Write(entidad.Name);#>  VALUES( 
+					<#
+					
+					foreach(Relacion relacion in this.Tapiz.Relacion)
+					{
+						if(relacion.EntidadDerecha.Name == entidad.Name || relacion.EntidadIzquieda.Name == entidad.Name)
+							if( !((relacion.CardinalidadIzquierda == Cardinalidad.UnoN || 
+								relacion.CardinalidadIzquierda == Cardinalidad.CeroN) &&
+								(relacion.CardinalidadDerecha == Cardinalidad.UnoN ||
+								relacion.CardinalidadDerecha == Cardinalidad.CeroN)))
+							{
+
+								if(relacion.EntidadIzquieda.Name == entidad.Name)
+								{
+									if( (relacion.CardinalidadIzquierda == Cardinalidad.UnoN || relacion.CardinalidadIzquierda == Cardinalidad.CeroN) ||
+										((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+									{	
+										Write("'$"+ relacion.EntidadIzquieda.ClavePrimaria.Name+"'");
+										if(cont!=1 || cont!=0)
+										{
+											cont--;
+											Write(",");
+										}
+									}
+
+								}
+								else
+								{
+									if( (relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN) ||
+										((relacion.CardinalidadIzquierda == Cardinalidad.CeroUno || relacion.CardinalidadIzquierda == Cardinalidad.UnoUno) && (relacion.CardinalidadDerecha == Cardinalidad.CeroUno || relacion.CardinalidadDerecha == Cardinalidad.UnoUno)) )
+									{
+										Write("'$"+ relacion.EntidadDerecha.ClavePrimaria.Name+"'");
+										if(cont!=1 || cont!=0)
+										{
+											cont--;
+											Write(",");
+										}
+									}
+								}	
+							}
+					}
+					Write("'$"+entidad.ClavePrimaria.Name+"'");
+					int recorrido=0;
+					foreach(Atributo atribu in entidad.AtributoEntidad)
+					{
+						if(recorrido!=(atrib))
+							Write( ",'$"+ atribu.Name + "'" );
 						else
-							Write( "'$"+ atributo.Name + "')" );
+							Write( ",'$"+ atribu.Name + "')" );
 						recorrido++;
 					}
-	#>");
-				
-				if ($resultado){
-					echo" Datos Insertados ";
-				}
-				else
-					echo"Error en la inserción";
-				mysql_close();
-			}
-		?>
-		</center>
+					#>)");
+					if ($resultado)
+					{
+						echo" Datos Insertados ";
+					}
+					else
+					{
+						echo"Error en la inserción";
+					}
+					mysql_close();
+			}//Termina el else
+			?>
+			</center>
 		</body>
 	</html>
 <#
-	}
 
+	}//Termina Foreach de entidad
 #>
+
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//----------------------------------------RELACIONES N/M--------------------------------------
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
 
 <#
 
@@ -188,109 +277,112 @@
 			(relacion.CardinalidadDerecha == Cardinalidad.UnoN || relacion.CardinalidadDerecha == Cardinalidad.CeroN))
 		{
 
-	fileManager.StartNewFile(relacion.Name + ".php");
+			fileManager.StartNewFile(relacion.Name + ".php");
 #>
 	
-	<html>
+			<html>
 
-		<head>
-		<title>
-			<# WriteLine(relacion.Name); #>
-		</title>
+				<head>
+					<title>
+						<# WriteLine(relacion.Name); #>
+					</title>
 
-		</head>
+				</head>
 
-		<body bgcolor="#B8D1F1">
-			<center>
+				<body bgcolor="#B8D1F1">
+					<center>
 	
-			 <?php
+					 <?php
 
-				 if (!(isset($_GET['<#  Write(relacion.EntidadDerecha.ClavePrimaria.Name); #>']))){
+					 if (!(isset($_GET['<#  Write(relacion.EntidadDerecha.ClavePrimaria.Name); #>'])))
+					 {
 	
-			 ?>
-
-			<form>
+						 ?>
+					 
+						 <form>
         
-				<h1><# Write(relacion.Name); #></h1>
+						<h1><# Write(relacion.Name); #></h1>
 				
-	<#Write("\t\t" + relacion.EntidadDerecha.ClavePrimaria.Name);#> : <input name="var<# Write(relacion.EntidadDerecha.ClavePrimaria.Name); #>" type="text" value="">
-	<#Write("\t\t" + relacion.EntidadIzquieda.ClavePrimaria.Name);#> : <input name="var<# Write(relacion.EntidadIzquieda.ClavePrimaria.Name); #>" type="text" value="">
-			<br>
-			<br>
+						<#Write("\t\t" + relacion.EntidadDerecha.ClavePrimaria.Name);#> : <input name="<# Write(relacion.EntidadDerecha.ClavePrimaria.Name); #>" type="text" value="">
+						<#Write("\t\t" + relacion.EntidadIzquieda.ClavePrimaria.Name);#> : <input name="<# Write(relacion.EntidadIzquieda.ClavePrimaria.Name); #>" type="text" value="">
+						<br>
+						<br>
 
-	<#
+<#
 				
 	
-				int atrib=0;
-				foreach(Atributo atributo in relacion.AtributoRelacion)
-				{
-					Write("\t\t" + atributo.Name);
-					atrib++;
-	
-	#> : <input name="var<# Write( atributo.Name); #>" type="text" value="">
-			<br>
-			<br>
-	<#
-				}
-	#>
-				<input type="submit" value="Alta" />
+						int atrib=0;
+						foreach(Atributo atributo in relacion.AtributoRelacion)
+						{
+							Write("\t\t" + atributo.Name);
+							atrib++;
+		
+							#> : <input name="<# Write( atributo.Name); #>" type="text" value="">
+							<br>
+							<br>
+<#	
+						}
+#>	
+						<input type="submit" value="Alta" />
+							
+						</form>
 
-			</form>
+						<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
 
-			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+						<?php
+					}
 
-			<?php
-				}
-				else{
-					$conex = @mysql_connect("localhost","root") or die("ERROR...");
+					else
+					{
+						$conex = @mysql_connect("localhost","root") or die("ERROR...");
 
     
-					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
+						mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
-	<#
-					foreach(Atributo atributo in relacion.AtributoRelacion)
-					{
-						WriteLine("\t$" + atributo.Name + " = $_GET['var"+ atributo.Name + "'];");
-					}
-	#>
-	$resultado = mysql_query("INSERT INTO Alumno VALUES(
-	<#
-			Write("'$" + relacion.EntidadDerecha.ClavePrimaria.Name+"',");
-			Write("'$" + relacion.EntidadIzquieda.ClavePrimaria.Name+"'");
-			if (atrib==0)
-				Write(",");
-					int recorrido=0;
-					foreach(Atributo atributo in relacion.AtributoRelacion)
-				{
-						if(recorrido!=(atrib-1))
-							Write( "'$"+ atributo.Name + "'," );
+<#
+						Write("$" + relacion.EntidadDerecha.ClavePrimaria.Name+ " = $_GET['" + relacion.EntidadDerecha.ClavePrimaria.Name + "'];");
+						Write("$" + relacion.EntidadIzquieda.ClavePrimaria.Name+ " = $_GET['" + relacion.EntidadIzquieda.ClavePrimaria.Name + "'];");
+						foreach(Atributo atributo in relacion.AtributoRelacion)
+						{
+							WriteLine("\t$" + atributo.Name + " = $_GET['" + atributo.Name + "'];");
+						}
+#>
+						$resultado = mysql_query("INSERT INTO <#Write(relacion.Name);#>  VALUES( 
+<#
+						Write("'$" + relacion.EntidadDerecha.ClavePrimaria.Name+"',");
+						Write("'$" + relacion.EntidadIzquieda.ClavePrimaria.Name+"'");
+						if (atrib!=0)
+							Write(",");
+						int recorrido=0;
+						foreach(Atributo atributo in relacion.AtributoRelacion)
+						{
+							if(recorrido!=(atrib))
+								Write( "'$"+ atributo.Name + "'," );
+							else
+								Write( "'$"+ atributo.Name + "')" );
+							recorrido++;
+						}
+						#>)");
+
+						if ($resultado)
+						{
+							echo" Datos Insertados ";
+						}
+
 						else
-							Write( "'$"+ atributo.Name + "')" );
-						recorrido++;
-					}
-	#>");
-				
-				if ($resultado){
-					echo" Datos Insertados ";
-				}
-				else
-					echo"Error en la inserción";
-				mysql_close();
-			}
-		?>
-		</center>
+						{
+							echo"Error en la inserción";
+						}
+
+						mysql_close();
+				}//Termina else
+				?>
+			</center>
 		</body>
 	</html>
 <#
 		}
+	
 	}
-
-
-
-
-
-
-
-
 fileManager.Process();
 #>

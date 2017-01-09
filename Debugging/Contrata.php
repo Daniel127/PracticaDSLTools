@@ -1,60 +1,65 @@
-
 	
-	<html>
+			<html>
 
-		<head>
-		<title>
-			Contrata
+				<head>
+					<title>
+						Contrata
+					</title>
 
-		</title>
+				</head>
 
-		</head>
-
-		<body bgcolor="#B8D1F1">
-			<center>
+				<body bgcolor="#B8D1F1">
+					<center>
 	
-			 <?php
+					 <?php
 
-				 if (!(isset($_GET['Nombre']))){
+					 if (!(isset($_GET['Nombre'])))
+					 {
 	
-			 ?>
-
-			<form>
+						 ?>
+					 
+						 <form>
         
-				<h1>Contrata</h1>
+						<h1>Contrata</h1>
 				
-			Nombre : <input name="varNombre" type="text" value="">
-			DNI : <input name="varDNI" type="text" value="">
-			<br>
-			<br>
+								Nombre : <input name="Nombre" type="text" value="">
+								DNI : <input name="DNI" type="text" value="">
+						<br>
+						<br>
 
 	
-				<input type="submit" value="Alta" />
+						<input type="submit" value="Alta" />
+							
+						</form>
 
-			</form>
+						<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
 
-			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+						<?php
+					}
 
-			<?php
-				}
-				else{
-					$conex = @mysql_connect("localhost","root") or die("ERROR...");
+					else
+					{
+						$conex = @mysql_connect("localhost","root") or die("ERROR...");
 
     
-					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
+						mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
-	
-	$resultado = mysql_query("INSERT INTO Alumno VALUES(
-	'$Nombre','$DNI',");
-				
-				if ($resultado){
-					echo" Datos Insertados ";
-				}
-				else
-					echo"Error en la inserción";
-				mysql_close();
-			}
-		?>
-		</center>
+$Nombre = $_GET['Nombre'];$DNI = $_GET['DNI'];						$resultado = mysql_query("INSERT INTO Contrata  VALUES( 
+'$Nombre','$DNI')");
+
+						if ($resultado)
+						{
+							echo" Datos Insertados ";
+						}
+
+						else
+						{
+							echo"Error en la inserción";
+						}
+
+						mysql_close();
+				}//Termina else
+				?>
+			</center>
 		</body>
 	</html>

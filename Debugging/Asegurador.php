@@ -1,11 +1,8 @@
-
-	
-	<html>
+		<html>
 
 		<head>
 		<title>
 			Asegurador
-
 		</title>
 
 		</head>
@@ -15,56 +12,65 @@
 	
 			 <?php
 
-				 if (!(isset($_GET['Nombre']))){
+				 if (!(isset($_GET['Nombre'])))
+				 {
 	
 			 ?>
 
-			<form>
+					<form>
         
-				<h1>Asegurador</h1>
+					<h1>Asegurador</h1>
 				
-			Nombre : <input name="Nombre" type="text" value="">
-			<br>
-			<br>
+							Nombre : <input name="Nombre" type="text" value="">
+					<br>
+					<br>
 
 
-			TipoSeguro : <input name="TipoSeguro" type="text" value="">
-			<br>
-			<br>
-	 : <input name="Matricula" type="text" value="">
-										<br>
-										<br>
+		TipoSeguro: <input name="TipoSeguro" type="text" value="">
+						<br>
+						<br>
+					
+					<input type="submit" value="Alta" />
 
-	
-				<input type="submit" value="Alta" />
+					</form>
 
-			</form>
+					<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
 
-			<a href="PaginaPPal.php"> <input value="Volver" type="submit" /> </a>
+					
 
-			<?php
-				}
-				else{
+					<?php
+				
+					}//Termina if
+				
+				else
+				{
 					$conex = @mysql_connect("localhost","root") or die("ERROR...");
 
     
 					mysql_select_db("SampleBD") or die("ERROR CON LA BASE DE DATOS");
 
-		$TipoSeguro = $_GET['TipoSeguro'];
+	$Nombre = $_GET['Nombre'];	$TipoSeguro = $_GET['TipoSeguro'];
 
-	$resultado = mysql_query("INSERT INTO Alumno VALUES(
-	'$TipoSeguro')");
-				
-				if ($resultado){
-					echo" Datos Insertados ";
-				}
-				else
-					echo"Error en la inserción";
-				mysql_close();
-			}
-		?>
-		</center>
+					$resultado = mysql_query("INSERT INTO Asegurador  VALUES( 
+					'$Nombre','$TipoSeguro')");
+					if ($resultado)
+					{
+						echo" Datos Insertados ";
+					}
+					else
+					{
+						echo"Error en la inserción";
+					}
+					mysql_close();
+			}//Termina el else
+			?>
+			</center>
 		</body>
 	</html>
 
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//----------------------------------------RELACIONES N/M--------------------------------------
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
 
