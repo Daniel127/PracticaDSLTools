@@ -24,10 +24,15 @@
     		<a href="Tiene.php"><b>Tiene</b> </a> 
 		<br>
 		<br>
+		
 				<a href="Contrata.php"><b>Contrata</b> </a> 
 		<br>
 		<br>
-		    </center>
+		
+			<br>
+	<br>
+	<input name="button" type="button" onclick="window.close();" value="Cerrar" /> 
+    </center>
 </body>
 </html>
 

@@ -48,14 +48,22 @@ $Nombre = $_GET['Nombre'];$DNI = $_GET['DNI'];						$resultado = mysql_query("IN
 '$Nombre','$DNI')");
 
 						if ($resultado)
-						{
-							echo" Datos Insertados ";
-						}
-
-						else
-						{
-							echo"Error en la inserción";
-						}
+					{
+						echo" Datos Insertados ";
+						?>
+						<br>
+						<br>
+						<a href="Contrata.php"><b>Volver a Contrata</b> </a>
+						<?php
+					}
+					else
+					{
+						echo"Error en la inserción";
+						?><br>
+						<br>
+						<a href="Contrata.php"><b>Volver a Contrata</b> </a>
+						<?php
+					}
 
 						mysql_close();
 				}//Termina else

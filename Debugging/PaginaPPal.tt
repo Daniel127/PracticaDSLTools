@@ -33,10 +33,14 @@
 		<a href="<#  Write(relacion.Name); #>.php"><b><# Write(relacion.Name); #></b> </a> 
 		<br>
 		<br>
+		
 		<#
 		}
 	}
 	#>
+	<br>
+	<br>
+	<input name="button" type="button" onclick="window.close();" value="Cerrar" /> 
     </center>
 </body>
 </html>
@@ -246,10 +250,19 @@
 					if ($resultado)
 					{
 						echo" Datos Insertados ";
+						?>
+						<br>
+						<br>
+						<a href="<#  Write(entidad.Name); #>.php"><b>Volver a <# Write(entidad.Name); #></b> </a>
+						<?php
 					}
 					else
 					{
 						echo"Error en la inserción";
+						?><br>
+						<br>
+						<a href="<#  Write(entidad.Name); #>.php"><b>Volver a <# Write(entidad.Name); #></b> </a>
+						<?php
 					}
 					mysql_close();
 			}//Termina el else
@@ -261,12 +274,6 @@
 
 	}//Termina Foreach de entidad
 #>
-
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//----------------------------------------RELACIONES N/M--------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
 
 <#
 
@@ -365,14 +372,22 @@
 						#>)");
 
 						if ($resultado)
-						{
-							echo" Datos Insertados ";
-						}
-
-						else
-						{
-							echo"Error en la inserción";
-						}
+					{
+						echo" Datos Insertados ";
+						?>
+						<br>
+						<br>
+						<a href="<#  Write(relacion.Name); #>.php"><b>Volver a <# Write(relacion.Name); #></b> </a>
+						<?php
+					}
+					else
+					{
+						echo"Error en la inserción";
+						?><br>
+						<br>
+						<a href="<#  Write(relacion.Name); #>.php"><b>Volver a <# Write(relacion.Name); #></b> </a>
+						<?php
+					}
 
 						mysql_close();
 				}//Termina else

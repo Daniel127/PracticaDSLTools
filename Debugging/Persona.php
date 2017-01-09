@@ -56,10 +56,19 @@
 					if ($resultado)
 					{
 						echo" Datos Insertados ";
+						?>
+						<br>
+						<br>
+						<a href="Persona.php"><b>Volver a Persona</b> </a>
+						<?php
 					}
 					else
 					{
 						echo"Error en la inserción";
+						?><br>
+						<br>
+						<a href="Persona.php"><b>Volver a Persona</b> </a>
+						<?php
 					}
 					mysql_close();
 			}//Termina el else

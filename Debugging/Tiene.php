@@ -48,14 +48,22 @@ $Matricula = $_GET['Matricula'];$DNI = $_GET['DNI'];						$resultado = mysql_que
 '$Matricula','$DNI')");
 
 						if ($resultado)
-						{
-							echo" Datos Insertados ";
-						}
-
-						else
-						{
-							echo"Error en la inserción";
-						}
+					{
+						echo" Datos Insertados ";
+						?>
+						<br>
+						<br>
+						<a href="Tiene.php"><b>Volver a Tiene</b> </a>
+						<?php
+					}
+					else
+					{
+						echo"Error en la inserción";
+						?><br>
+						<br>
+						<a href="Tiene.php"><b>Volver a Tiene</b> </a>
+						<?php
+					}
 
 						mysql_close();
 				}//Termina else
